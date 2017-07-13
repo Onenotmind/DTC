@@ -14,6 +14,7 @@ var SEPARATION = 100, AMOUNTX = 50, AMOUNTY = 50;
         container.style.position = "absolute";
         container.style.top = "0";
         container.style.left = "0";
+        container.style.zIndex = "-1";
         $(".wrap").append(container);
         camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 1, 10000);
         camera.position.z = 1000;
