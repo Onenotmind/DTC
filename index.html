@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <title>index</title>
     <link rel="stylesheet" href="./libs/bootstrap.css" >
+    <link rel="stylesheet" href="./libs/style.css" >
     <style type="text/css">
     	.dropdown-menu > li > a >img {
     		width: 24px;
@@ -45,7 +46,22 @@
   line-height: 1.3333333;
   border-radius: 20px;
 }
-i {
+.dtcintro i {
+  font-size: 1.5rem !important;
+  line-height: 1;
+  margin-top: 30px;
+  font-style: italic;
+  color: #242424 !important;
+  font-weight:300;
+}
+.teamintro i {
+  font-style: italic;
+  line-height: 1;
+  color: #242424 !important;
+  font-weight: 300;
+  font-size: 1.5rem !important;
+}
+.invest i {
   font-style: italic;
   line-height: 1;
   color: #242424 !important;
@@ -58,6 +74,12 @@ i {
 
 .col-md-3 .text-center img {
   width: 80px;height: 80px;border-radius: 80px;margin-top: 40px;margin-bottom: 40px;
+}
+.dtc-nav-color {
+  background: rgba(255, 255, 255, .12);
+}
+.shrink {
+  background: rgba(51, 122, 183, .82);
 }
     </style>
     <script type="application/javascript">
@@ -120,9 +142,10 @@ i {
     </script><meta name="viewport" content="initial-scale=1,maximum-scale=1, minimum-scale=1">
     <script src="./libs/jquery-3.1.0.min.js"></script>
     <script src="./libs/bootstrap.js" ></script>
+    <script src="./libs/jquery.countdown.js"></script>
 </head>
 <body style="overflow-y: auto;">
-<header style="background: rgba(255, 255, 255, .12);" class="navbar-fixed-top">
+<header style="" class="navbar-fixed-top dtc-nav-color">
 <div class="logo">
 	<img src="./images/leftlogo2.png">
 </div>
@@ -158,8 +181,61 @@ i {
 </div>
 </div>
 </div>
-<div class="container" style="margin-top: 50%;">
-
+<div class="coming-soon">
+    <div class="inner-bg">
+        <div class="container" style="margin-top:50%;">
+            <div class="row">
+                <div class="span12">
+                    <h2>We're Coming Soon</h2>
+                    <p>We are working very hard on the new version of our site. It will bring a lot of new features. Stay tuned!</p>
+                    <div class="timer">
+                        <div class="days-wrapper">
+                            <span class="days"></span> <br>days
+                        </div>
+                        <div class="hours-wrapper">
+                            <span class="hours"></span> <br>hours
+                        </div>
+                        <div class="minutes-wrapper">
+                            <span class="minutes"></span> <br>minutes
+                        </div>
+                        <div class="seconds-wrapper">
+                            <span class="seconds"></span> <br>seconds
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="container dtcintro" style="margin-top: 5%;">
+<div class="row">
+  <div class="col-md-8 col-md-offset-2">
+    <p class="text-center">
+      <img src="./images/base_en.png" >
+    </p>
+    <p>
+      <i style="">DTC is a block-chain technology integrated application platform, with tree-like layered, three-dimensional multi-chain architecture, while adding regional chain technology 2.0 as the core of the intelligent contract platform, distributed application of the underlying protocol and other innovative technologies. DTC will focus on the data storage, analysis and decision-making of various industries, while working with other application chain to achieve DTC transactions in various types of data and circulation in the future to become the Circulation of blockchain applications</i>
+    </p>
+  </div>
+</div>
+</div>
+<div class="container application" >
+<hr class="col-md-5"> <div class="col-md-1 text-center" style="font-size:20px;line-height:20px;font-weight:600;margin-top:10px;">Application</div><hr class="col-md-5">
+<div class="row">
+  <div class="col-md-4 col-md-offset-1 pull-left">
+    <p class="text-center">
+      <img src="./images/i1.jpg">
+    </p>
+  </div>
+  <div class="col-md-4 col-md-offset-2 pull-left">
+    <p>
+      <span style="font-size:16px;" >Data analysis</span>----DTC can be used for enterprise data decision-making, for the global small and medium enterprises to provide data sorting, analysis and decision-making. DTC can link an application through the side chain, and provide a number of data analysis, the data classification.
+    </p>
+  </div>
+</div>
+</div>
+<div class="container teamintro" >
+<hr class="col-md-5"> <div class="col-md-1 text-center" style="font-size:20px;line-height:20px;font-weight:600;margin-top:10px;">team</div><hr class="col-md-5">
   <div class="row">
     <div class="col-md-3">
       <p class="text-center">
@@ -245,8 +321,8 @@ i {
     </div>
   </div>
 </div>
-<div class="container" style="margin-top: 5%;">
-  <hr class="col-md-5"> <div class="col-md-1 text-center" style="font-size:14px;line-height:14px;margin-top:10px;">team</div><hr class="col-md-5">
+<div class="container invest" style="margin-top: 5%;">
+  <hr class="col-md-5"> <div class="col-md-1 text-center" style="font-size:20px;line-height:20px;font-weight:600;margin-top:10px;">team</div><hr class="col-md-5">
 <div class="row">
 <div class="col-xs-8 col-sm-8 col-md-8 col-md-offset-2">
 <div id="myCarousel" class="carousel slide">  
@@ -297,4 +373,10 @@ i {
 </div>
 <script type="text/javascript" src="libs/three.min.js"></script>
 <script type="text/javascript" src="libs/wave.js"></script>
+<script src="libs/scripts.js"></script>
+<script type="text/javascript">
+  $(window).scroll(function(){
+        $('.navbar-fixed-top').toggleClass('shrink',$(document).scrollTop()>30);
+    })
+</script>
 </body>
