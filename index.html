@@ -23,7 +23,7 @@
     	.logo {
     		position: absolute;
     		top: .5rem;
-    		left: 0;
+    		left: 20px;
     	}
     	.wrap {
     		position: absolute; 
@@ -44,7 +44,7 @@
   padding: 15px 100px;
   font-size: 14px;
   line-height: 1.3333333;
-  border-radius: 20px;
+  border-radius: 30px;
 }
 .dtcintro i {
   font-size: 1.5rem !important;
@@ -68,6 +68,20 @@
   font-weight: 300;
   font-size: 2.75rem !important;
 }
+.feature i {
+  font-style: italic;
+  line-height: 1;
+  color: #242424 !important;
+  font-weight: 300;
+  font-size: 1.5rem !important;
+}
+.timeline i {
+  font-style: italic;
+  line-height: 1;
+  color: #242424 !important;
+  font-weight: 300;
+  font-size: 1.7rem !important;
+}
 .item .text-center img {
   width: 40px;height: 40px;border-radius: 40px;margin-top: 40px;margin-bottom: 40px;
 }
@@ -75,11 +89,110 @@
 .col-md-3 .text-center img {
   width: 80px;height: 80px;border-radius: 80px;margin-top: 40px;margin-bottom: 40px;
 }
-.dtc-nav-color {
-  background: rgba(255, 255, 255, .12);
-}
+/*.dtc-nav-color {
+  background: rgba(0, 0, 0, .12);
+}*/
 .shrink {
-  background: rgba(51, 122, 183, .82);
+  background: linear-gradient(to right,#182848,#4b6cb7);
+}
+hr {
+  width: 40%;
+  float:left;
+}
+
+.section-title {
+  width:20%;
+  text-align:center;
+  font-size:20px;
+  line-height:20px;
+  font-weight:600;
+  margin-top:10px;
+  float:left;
+}
+
+.common-font {
+  font-family:'Lato, sans-serif';
+  font-weight:300;
+}
+.common-title-font {
+  font-family:'Montserrat, sans-serif';
+  font-weight:300;
+  line-height:1.2;
+}
+.dtc-nav-bg {
+  margin:30px 10px 0 0;
+}
+.clock-margin {
+  margin-top: 50%;
+}
+.inverted-btn {
+  background: rgba(255, 255, 255, .02);
+  border:0.0625rem solid #fff;
+}
+.mobile-menu {
+  position:absolute;
+  right:5rem;
+  top:30px;
+  display: none;
+}
+@media (max-width: 768px) {
+  .wrap {
+        position: absolute; 
+        z-index: -1; 
+        top: 0px; 
+        left: 0px; 
+        bottom: inherit; 
+        right: 0px; 
+        overflow: hidden; 
+        background-size: cover; 
+        background-repeat: no-repeat; 
+        background-position: 50% 50%; 
+        background-image: url(./images/bg2-1.png);
+
+      }
+      .clock-margin {
+  margin-top: 300px;
+}
+  .dtcintro img{
+    width: 100%;
+    height: auto;
+  }
+  .section-title {
+  width:20%;
+  text-align:center;
+  font-size:14px;
+  line-height:14px;
+  font-weight:500;
+  margin-top:10px;
+  float:left;
+}
+  .mobile-menu {
+    position:absolute;
+    right:20px;
+    top:5px;
+  display: block;
+}
+}
+@media (max-width: 768px) {
+  .timeline img{
+    width: 100%;
+    height: auto;
+  }
+  .down-icon {
+    display: none;
+  }
+  .wrap h4 {
+    display: none;
+  }
+  .mobile-button {
+    width: 80%;
+    margin-top: 10px;
+  }
+  .nav > li {
+  position: relative;
+  display: none;
+}
+
 }
     </style>
     <script type="application/javascript">
@@ -143,18 +256,27 @@
     <script src="./libs/jquery-3.1.0.min.js"></script>
     <script src="./libs/bootstrap.js" ></script>
     <script src="./libs/jquery.countdown.js"></script>
+    <script src="./libs/jquery.fullPage.min.js"></script>
 </head>
 <body style="overflow-y: auto;">
-<header style="" class="navbar-fixed-top dtc-nav-color">
+<header class="navbar-fixed-top dtc-nav-color dtc-nav-bg">
 <div class="logo">
 	<img src="./images/leftlogo2.png">
 </div>
-<ul class="nav nav-pills col-md-offset-8" >
+<div class="dropdown mobile-menu" style="">
+  <a data-toggle="dropdown" href="#"><img src="./images/menu.png"></a></a>
+  <ul class="dropdown-menu" role="menu" aria-labelledby="dLabel">
+    <li><a href="#">Home</a></li>
+    <li><a href="#">Intro</a></li>
+  <li><a href="#">Timeline</a></li>
+  <li><a href="#">Team</a></li>
+  </ul>
+</div>
+<ul class="nav nav-pills col-md-offset-8 common-font" >
   <li class="active"><a href="#">Home</a></li>
-  <li><a href="#">SVN</a></li>
-  <li><a href="#">iOS</a></li>
-  <li><a href="#">VB.Net</a></li>
-  <li><a href="#">Java</a></li>
+  <li><a class="intro">Intro</a></li>
+  <li><a href="#">Timeline</a></li>
+  <li><a href="#">Team</a></li>
   <li class="dropdown">
       <a class="dropdown-toggle" data-toggle="dropdown" href="#">
         <img src="./images/flag_china.png"><span class="caret"></span>
@@ -164,116 +286,181 @@
     </li>
 </ul>
 </header>
-<div class="wrap">
+<div class="wrap section">
 <div class="container">
 <div class="row" style="margin-top:20%;">
-<div class="col-xs-12 col-sm-12 col-md-12">
-<h1 class="text-center" style="color: #fff;">AI-Driven Sales Channel</h1>
-<p class="text-center" style="margin-top: 4rem;">
-  <button type="button" class="btn btn-primary btn-lg">TOKEN SALE</button>
-  <button type="button" class="btn btn-primary btn-lg" >WHITE-PAPER</button>
+<div class="col-xs-12 col-sm-12 col-md-12 ">
+<h2 class="text-center common-title-font" style="color: #fff;">The Circulation Of Blockchain Application</h2>
+<p class="text-center " style="margin-top: 4rem;">
+  <button type="button" class="btn btn-primary btn-lg common-font mobile-button">TOKEN SALE</button>
+  <button type="button" class="btn btn-primary btn-lg common-font mobile-button inverted-btn" >WHITE-PAPER</button>
 </p>
-<p class="text-center">
-  <span class="glyphicon glyphicon-chevron-down" style="color: #fff;margin-top: 3rem;"></span>
+<p class="text-center down-icon" style="margin-top:10rem;">
+  <img src="./images/double-down.png">
 </p>
-<h4 class="text-center" style="color: #fff;">Learn More</h4>
+<h4 class="text-center common-font" style="color: #fff;">Learn More</h4>
 </div>
 </div>
 </div>
 </div>
-<div class="coming-soon">
-    <div class="inner-bg">
-        <div class="container" style="margin-top:50%;">
-            <div class="row">
-                <div class="span12">
-                    <h2>We're Coming Soon</h2>
-                    <p>We are working very hard on the new version of our site. It will bring a lot of new features. Stay tuned!</p>
-                    <div class="timer">
-                        <div class="days-wrapper">
-                            <span class="days"></span> <br>days
-                        </div>
-                        <div class="hours-wrapper">
-                            <span class="hours"></span> <br>hours
-                        </div>
-                        <div class="minutes-wrapper">
-                            <span class="minutes"></span> <br>minutes
-                        </div>
-                        <div class="seconds-wrapper">
-                            <span class="seconds"></span> <br>seconds
-                        </div>
-                    </div>
+<div class="container coming-soon inner-bg clock-margin section" >
+    <div class="row">
+        <div class="span12">
+            <h2>We're Coming Soon</h2>
+            <p>DTC's ICO will begin in Aug 7!</p>
+            <div class="timer">
+                <div class="days-wrapper">
+                    <span class="days"></span> <br>days
+                </div>
+                <div class="hours-wrapper">
+                    <span class="hours"></span> <br>hours
+                </div>
+                <div class="minutes-wrapper">
+                    <span class="minutes"></span> <br>minutes
+                </div>
+                <div class="seconds-wrapper">
+                    <span class="seconds"></span> <br>seconds
                 </div>
             </div>
         </div>
     </div>
 </div>
-<div class="container dtcintro" style="margin-top: 5%;">
-<div class="row">
+
+<div class="container dtcintro section" style="margin-top: 5%;">
+<hr> <div class="section-title">Introduction</div><hr>
+<div class="row col-md-12">
+  
   <div class="col-md-8 col-md-offset-2">
-    <p class="text-center">
+    <p class="text-center inner-bg">
       <img src="./images/base_en.png" >
     </p>
     <p>
-      <i style="">DTC is a block-chain technology integrated application platform, with tree-like layered, three-dimensional multi-chain architecture, while adding regional chain technology 2.0 as the core of the intelligent contract platform, distributed application of the underlying protocol and other innovative technologies. DTC will focus on the data storage, analysis and decision-making of various industries, while working with other application chain to achieve DTC transactions in various types of data and circulation in the future to become the Circulation of blockchain applications</i>
+      <i>DTC is a block-chain technology integrated application platform, with tree-like layered, three-dimensional multi-chain architecture, while adding blockchain technology 2.0 as the core of the intelligent contract platform, distributed application of the underlying protocol and other innovative technologies. DTC will focus on the data storage, analysis and decision-making of various industries, while working with other application chain to achieve DTC transactions in various types of data and circulation in the future to become the Circulation of blockchain applications</i>
     </p>
   </div>
 </div>
 </div>
-<div class="container application" >
-<hr class="col-md-5"> <div class="col-md-1 text-center" style="font-size:20px;line-height:20px;font-weight:600;margin-top:10px;">Application</div><hr class="col-md-5">
-<div class="row">
+
+<div class="container feature section" >
+<hr> <div class="section-title">Feature</div><hr>
+<div class="row inner-bg">
   <div class="col-md-4 col-md-offset-1 pull-left">
     <p class="text-center">
-      <img src="./images/i1.jpg">
+      <img src="./images/feature1.png">
     </p>
   </div>
   <div class="col-md-4 col-md-offset-2 pull-left">
     <p>
+      <i>
       <span style="font-size:16px;" >Data analysis</span>----DTC can be used for enterprise data decision-making, for the global small and medium enterprises to provide data sorting, analysis and decision-making. DTC can link an application through the side chain, and provide a number of data analysis, the data classification.
+    </i>
+    </p>
+  </div>
+</div>
+<div class="row">
+  <div class="col-md-4 col-md-offset-1 pull-left">
+    <p>
+      <i>
+      <span style="font-size:16px;" >Data traceability</span>----DTC can handle multiple applications in parallel because of its side chain functions or through intelligent contractual means. The unique non-modifyable records of the block chain can show all the data trajectories of the enterprise application during operation, greatly improving the product's advantages in traceability.
+    </i>
+    </p>
+  </div>
+  <div class="col-md-4  col-md-offset-2 pull-left">
+    <p class="text-center">
+      <img src="./images/feature2.png">
+    </p>
+  </div>
+  
+</div>
+<div class="row">
+  <div class="col-md-4 col-md-offset-1 pull-left">
+    <p class="text-center">
+      <img src="./images/feature4.png">
+    </p>
+  </div>
+  <div class="col-md-4 col-md-offset-2 pull-left">
+    <p>
+      <i>
+      <span style="font-size:16px;" >Identification</span>----In the centralized system, the information is not fully transparent due to the location of the center. The block chain with natural data trajectory clear and transparent, DTC through the side chain analysis, can be a perfect solution in the enterprise application for some of the identity of the simulation scene。
+    </i>
+    </p>
+  </div>
+</div>
+<div class="row">
+  <div class="col-md-4 col-md-offset-1 pull-left">
+    <p>
+      <i>
+      <span style="font-size:16px;" >Decision-tree Application</span>----DTC based on the stored enterprise data, through the side-chain multi-level algorithm processing, can form a decision-making decision-making tree decision-making tree. On the basis of the decision tree, it can be developed with enterprise as the core of enterprise applications.
+    </i>
+    </p>
+  </div>
+  <div class="col-md-4 col-md-offset-2 pull-left">
+    <p class="text-center">
+      <img src="./images/feature3.png">
+    </p>
+  </div>
+  
+</div>
+</div>
+<div class="container timeline section">
+<hr> <div class="section-title">Timeline</div><hr>
+<div class="row col-md-12 inner-bg">
+  
+  <div class="col-md-10 col-md-offset-1">
+    <p class="text-center">
+      <img src="./images/timeline_en.png" >
+    </p>
+    <p>
+      <i>2017.04&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspDTC team was established，start DTC project.<br/><br/>2017.05&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspParticipate in 3rd blockchain technology summit in New York
+，The team discussed the options for changing the existing architecture of the DTC and adding new technologies for the regional chain<br/><br/>2017.06&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspDTC official team identified the ICO program in China, landing ICO platform<br/><br/>2017.07&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspAfter ICO success   DTC will visit the Chinese exchange for free trade in two weeks<br/><br/>2017.08&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspIn mid or late August, DTC market volatility should stabilize, open the pool<br/><br/>2017.10&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspDTC official team will work with other regional chain team to achieve the market value of DTC after October</i>
     </p>
   </div>
 </div>
 </div>
-<div class="container teamintro" >
-<hr class="col-md-5"> <div class="col-md-1 text-center" style="font-size:20px;line-height:20px;font-weight:600;margin-top:10px;">team</div><hr class="col-md-5">
-  <div class="row">
+<div class="container teamintro section" >
+<hr> <div class="section-title">Team</div><hr>
+  <div class="row inner-bg">
     <div class="col-md-3">
       <p class="text-center">
         <img src="./images/p1.jpg">
       </p>
+      <p class="text-center">Gavin Ellis  Chief Designer</p>
       <p>
        <i>
-        " Flinkhub has helped us in taking our business from offline to online. Using Flinkhub we also took a step further and automated a lot of the processes. We were not sure how to do this before.  "
+        Smart Bitcoin Advocate, one of the Omni layer project sponsors. Research at the Carnegie Mellon University for distributed web-related content. With more than 10 years of programming experience. Today focused on blockchain technology and launched DTC projects with partners.
         </i>
       </p>
     </div>
     <div class="col-md-3">
       <p class="text-center">
-        <img src="./images/p1.jpg">
+        <img src="./images/p2.jpg">
       </p>
+      <p class="text-center">Joe Anderton  Chief Designer</p>
       <p>
        <i>
-        " Flinkhub has helped us in taking our business from offline to online. Using Flinkhub we also took a step further and automated a lot of the processes. We were not sure how to do this before.  "
+        Joe worked for four years at MoodStock, a Silicon Valley Artificial Intelligence start-up company, as one of the heads of the company's neural data network. After the separation of the bitcoin to the central idea and block chain technology to attract, participated in a number of blockchain-related projects.
         </i>
       </p>
     </div>
     <div class="col-md-3">
       <p class="text-center">
-        <img src="./images/p1.jpg">
+        <img src="./images/p3.jpg">
       </p>
+      <p class="text-center">Jack Yarwood Core Developer</p>
       <p>
        <i>
-        " Flinkhub has helped us in taking our business from offline to online. Using Flinkhub we also took a step further and automated a lot of the processes. We were not sure how to do this before.  "
+        Bitcoin's faithful pursuer,  Geeker, worked in Amazon, was responsible for the company's logistics distribution network management. After the conversion to Bitcoin, blockchain followers, in the programming has a strong talent.
         </i>
       </p>
     </div>
     <div class="col-md-3">
       <p class="text-center">
-        <img src="./images/p1.jpg">
+        <img src="./images/p4.jpg">
       </p>
+      <p class="text-center">John Tang  Core Developer</p>
       <p>
        <i>
-        " Flinkhub has helped us in taking our business from offline to online. Using Flinkhub we also took a step further and automated a lot of the processes. We were not sure how to do this before.  "
+        Chinese, and Jack Yarwood's colleague. At the graduate stage, John came into contact with Bitcoin, and although he had been working in the business, he kept his research on Bitcoin in private and developed his own mining algorithm.
         </i>
       </p>
     </div>
@@ -281,12 +468,12 @@
   <div class="row">
     <div class="col-md-3">
       <p class="text-center">
-        <img src="./images/p1.jpg">
+        <img src="./images/p5.jpg">
       </p>
+      <p class="text-center">Mike Li  Product</p>
       <p>
        <i>
-        " Flinkhub has helped us in taking our business from offline to online. Using Flinkhub we also took a step further and automated a lot of the processes. We were not sure how to do this before.  "
-        </i>
+        Many Silicon Valley companies experience, had been in the artificial intelligence company, and later removed from VC venture capital firms. Mike has a wealth of programming experience and technology venture capital concept, it is his concept to draw the development of DTC future.
       </p>
     </div>
     <div class="col-md-3">
@@ -321,10 +508,10 @@
     </div>
   </div>
 </div>
-<div class="container invest" style="margin-top: 5%;">
-  <hr class="col-md-5"> <div class="col-md-1 text-center" style="font-size:20px;line-height:20px;font-weight:600;margin-top:10px;">team</div><hr class="col-md-5">
+<div class="container invest section" style="margin-top: 5%;">
+ <hr> <div class="section-title">Investor</div><hr>
 <div class="row">
-<div class="col-xs-8 col-sm-8 col-md-8 col-md-offset-2">
+<div class="col-xs-8 col-sm-8 col-md-8 col-md-offset-2 col-xs-offset-2">
 <div id="myCarousel" class="carousel slide">  
   <!-- 轮播（Carousel）项目 -->
   <div class="carousel-inner">
@@ -368,15 +555,17 @@
 </div>
 </div>
 </div>
-<div class="col-md-12" style="margin-top:5%;">
-  <p class="text-center">CopyRight 2016-2017 17dtchain.com All Rights Reserved.</p>
-</div>
+<footer class="col-md-12 shrink inner-bg" style="margin-top:5%;color:#fff;">
+  <h5 class="text-center">CopyRight 2016-2017 17dtchain.com All Rights Reserved.</5>
+</footer>
 <script type="text/javascript" src="libs/three.min.js"></script>
 <script type="text/javascript" src="libs/wave.js"></script>
 <script src="libs/scripts.js"></script>
 <script type="text/javascript">
   $(window).scroll(function(){
-        $('.navbar-fixed-top').toggleClass('shrink',$(document).scrollTop()>30);
+        $('.navbar-fixed-top').toggleClass('shrink',$(document).scrollTop()>60);
+        $('.navbar-fixed-top').removeClass('dtc-nav-bg',$(document).scrollTop()>60);
+        $('.navbar-fixed-top').toggleClass('dtc-nav-bg',$(document).scrollTop()<60);
     })
 </script>
 </body>

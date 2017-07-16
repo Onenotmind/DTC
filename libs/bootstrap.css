@@ -1096,8 +1096,9 @@ textarea {
   font-size: inherit;
   line-height: inherit;
 }
+/* canyeduni #337ab7*/
 a {
-  color: #337ab7;
+  color: #fff;
   text-decoration: none;
 }
 a:hover,
@@ -3517,6 +3518,7 @@ tbody.collapse.in {
 .dropdown-toggle:focus {
   outline: 0;
 }
+/* canyeduni */
 .dropdown-menu {
   position: absolute;
   top: 100%;
@@ -3530,7 +3532,6 @@ tbody.collapse.in {
   font-size: 14px;
   text-align: left;
   list-style: none;
-  background-color: #fff;
   -webkit-background-clip: padding-box;
           background-clip: padding-box;
   border: 1px solid #ccc;
@@ -3558,18 +3559,20 @@ tbody.collapse.in {
   color: #333;
   white-space: nowrap;
 }
+/* canyeduni */
 .dropdown-menu > li > a:hover,
 .dropdown-menu > li > a:focus {
   color: #262626;
   text-decoration: none;
-  background-color: #f5f5f5;
+  background-color: #2e6da4;
 }
+/* canyeduni */
 .dropdown-menu > .active > a,
 .dropdown-menu > .active > a:hover,
 .dropdown-menu > .active > a:focus {
   color: #fff;
   text-decoration: none;
-  background-color: #337ab7;
+  background-color: #2e6da4;
   outline: 0;
 }
 .dropdown-menu > .disabled > a,
@@ -3985,10 +3988,10 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
   display: block;
   padding: 10px 15px;
 }
+/* canyeduni */
 .nav > li > a:hover,
 .nav > li > a:focus {
   text-decoration: none;
-  background-color: #eee;
 }
 .nav > li.disabled > a {
   color: #777;
@@ -4000,10 +4003,10 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
   cursor: not-allowed;
   background-color: transparent;
 }
+/* canyeduni */
 .nav .open > a,
 .nav .open > a:hover,
 .nav .open > a:focus {
-  background-color: #eee;
   border-color: #337ab7;
 }
 .nav .nav-divider {
