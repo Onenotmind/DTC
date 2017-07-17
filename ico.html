@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>index</title>
+    <link rel="stylesheet" href="./libs/bootstrap.css" >
+    <style type="text/css">
+    .dropdown-menu > li > a >img {
+    		width: 24px;
+    		height: 24px;
+    		border-radius: 50%;
+    	}
+    .logo {
+    		position: absolute;
+    		top: .5rem;
+    		left: 20px;
+    	}
+    	.wrap {
+    		position: absolute; 
+    		z-index: -1; 
+    		top: 0px; 
+    		left: 0px; 
+    		bottom: 0px; 
+    		right: 0px; 
+    		overflow: hidden; 
+    		background-size: cover; 
+    		background-repeat: no-repeat; 
+        background: #18252E;
+    		background-position: 50% 50%; 
+/*    		background-image: url(./images/bg2-1.png);*/
+
+    	}
+    	.dtc-nav-bg {
+  margin:30px 10px 0 0;
+}
+    	.common-font {
+  font-family:'Lato, sans-serif';
+  font-weight:300;
+}
+.common-title-font {
+  font-family:'Montserrat, sans-serif';
+  font-weight:300;
+  line-height:1.2;
+}
+.progress-bar{
+	background: linear-gradient(-60deg, #1ca7d9 0, #36b9e9 100%);
+	border-radius:10px;
+}
+    </style>
+        <script type="application/javascript">
+        /*<![CDATA[*/
+        // 判断是否是手机端浏览器
+        function getBrowser() {
+            var ua = navigator.userAgent.toLowerCase();
+            var btypeInfo = (ua.match(/firefox|chrome|safari|opera/g) || "other")[0];
+            if ((ua.match(/msie|trident/g) || [] )[0]) {
+                btypeInfo = "msie";
+            }
+            var pc = "";
+            var prefix = "";
+            var plat = "";
+            //如果没有触摸事件 判定为PC
+            var isTocuh = ("ontouchstart" in window) || (ua.indexOf("touch") !== -1) || (ua.indexOf("mobile") !== -1);
+            if (isTocuh) {
+                if (ua.indexOf("ipad") !== -1) {
+                    pc = "pad";
+                } else if (ua.indexOf("mobile") !== -1) {
+                    pc = "mobile";
+                } else if (ua.indexOf("android") !== -1) {
+                    pc = "androidPad";
+                } else {
+                    pc = "pc";
+                }
+            } else {
+                pc = "pc";
+            }
+            switch (btypeInfo) {
+                case "chrome":
+                case "safari":
+                case "mobile":
+                    prefix = "webkit";
+                    break;
+                case "msie":
+                    prefix = "ms";
+                    break;
+                case "firefox":
+                    prefix = "Moz";
+                    break;
+                case "opera":
+                    prefix = "O";
+                    break;
+                default:
+                    prefix = "webkit";
+                    break
+            }
+            plat = (ua.indexOf("android") > 0) ? "android" : navigator.platform.toLowerCase();
+            return {
+                version: (ua.match(/[\s\S]+(?:rv|it|ra|ie)[\/: ]([\d.]+)/) || [])[1],     //版本
+                plat: plat,                   //系统
+                type: btypeInfo,              //浏览器
+                pc: pc,
+                prefix: prefix,                //前缀
+                isMobile: (pc == "pc") ? false : true              //是否是移动端
+            };
+        };
+        /*]]>*/
+    </script><meta name="viewport" content="initial-scale=1,maximum-scale=1, minimum-scale=1">
+    <script src="./libs/jquery-3.1.0.min.js"></script>
+    <script src="./libs/bootstrap.js" ></script>
+</head>
+<body>
+<header class="navbar-fixed-top dtc-nav-bg">
+<div class="logo">
+	<img src="./images/leftlogo2.png">
+</div>
+<ul class="nav nav-pills col-md-offset-8">
+	<li class="active"><a  href="#">Home</a></li>
+  <li><a  href="#">Intro</a></li>
+  <li class="dropdown">
+      <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+        <img src="./images/flag_china.png"><span class="caret"></span>
+      </a>
+      <ul class="dropdown-menu" style="min-width: 0;">
+        <li><a href="#"><img src="./images/flag_usa.png"></a></li>
+    </li>
+</ul>
+</header>
+<div class="wrap">
+<div class="container">
+<div class="row">
+<div class="col-xs-12 col-sm-12 col-md-12 ">
+<h2 class="text-center common-title-font" style="color: #fff;margin-top: 15rem;">ETChain  Culture is New Currency</h2>
+<table class="table col-md-6 col-md-offset-3 text-center" style="color: #fff;width:50%;">
+	<tbody>
+		<tr>
+			<td>当前官网总额</td>
+			<td>当前官网总额</td>
+			<td>参与人数</td>
+		</tr>
+		<tr>
+			<td>164 BTC</td>
+			<td>6160 BTC</td>
+			<td>1230人</td>
+		</tr>
+	</tbody>
+</table>
+</div>
+</div>
+<div class="row">
+<div class="progress">
+<div class="progress-bar" role="progressbar" aria-valuenow="60" 
+    aria-valuemin="0" aria-valuemax="100" style="width: 40%;">
+    <span class="sr-only">40% 完成</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+<script type="text/javascript" src="libs/three.min.js"></script>
+<script type="text/javascript" src="libs/wave.js"></script>
+</body>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
