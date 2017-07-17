@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html>
+<head> 
+<meta charset="UTF-8">
+<meta name="viewport" content="initial-scale=1,maximum-scale=1, minimum-scale=1">
+<style type="text/css">
+.header {width: 100%; background: rgba(255, 255, 255, .12);border-bottom: 1px solid rgba(255, 255, 255, .23);box-shadow: 0 0.03rem 0.07rem 0 rgba(255, 255, 255, .12);height: 1.5rem;position: fixed;top: 0;left: 0;z-index: 100000;}
+.header .logo {width: 2.5rem;height: 1rem;position: absolute;top:0.25rem;left:1rem;z-index: 10;background: url(./front/images/leftlogo2.png) no-repeat;background-size:100% 100%;}
+.header .tabs{width: 6rem;height: 1rem;position: absolute;right:1rem;z-index: 10;}
+.header .tabs .tab-item {position:relative;width: 3rem;height: 1rem;font-size: .5rem;text-decoration: none;color:#fff;margin-right:.7rem;}
+.main-section {width: 100%;overflow: hidden;min-width: 7.5rem;}
+#page1 {height:12rem;background:#151b32 url("./front/images/logo_bottom.png") no-repeat 50% 0;background-size:100% 100%;position: relative;}
+#page1 .logo {width: 5.7rem; height: 5.25rem; background: url("./front/images/dt2.png") no-repeat;background-size:100% 100%;  position: absolute; left: 50%; top: 1rem; margin-left: -2.85rem;-moz-animation: rotate 30s infinite linear; -webkit-animation: rotate 30s infinite linear; animation: rotate 30s infinite linear; }}
+@-moz-keyframes rotate {
+    0% { -moz-transform: rotate(0deg); }
+    50% { -moz-transform: rotate(180deg); }
+    100% { -moz-transform: rotate(360deg); }
+}
+@-webkit-keyframes rotate {
+    0% { -webkit-transform: rotate(0deg); }
+    50% { -webkit-transform: rotate(180deg); }
+    100% { -webkit-transform: rotate(360deg); }
+}
+@keyframes rotate {
+    0% { transform: rotate(0deg); }
+    50% { transform: rotate(180deg); }
+    100% { transform: rotate(360deg); }
+}
+#page1 .subtitle { width: 1.65rem; height: 1rem;margin-top:3.2rem; background: url("./front/images/DTC-big2.png") no-repeat;background-size:100% 100%; position: absolute; left: 50%; margin-left: -.825rem; }
+#page1 .subword { width: 12rem; height: 1rem; color: #fff; position: absolute; left: 50%;  margin-left: -6rem;text-align: center;margin-top: 6rem;font-size: .05rem;font-family: '仿宋';font-style:normal; }
+#page2 {height:auto;background: #1d2132;padding-top:1rem;border-bottom: 1px solid #fff;padding-bottom: 1rem;}
+.dt-intro {width: 100%;height:2rem;text-align: center;font-size: .05rem;color: #fff;}
+.dt-intro-content {width: 100%;height:auto}
+.dt-intro-base {width: 100%;height:auto;text-align: center;}
+.dt-intro-base img {width: 80%;height: auto;}
+.dt-intro-include {width: 100%;height:auto;color: #fff;margin-top:-1rem;font-size: .02rem;}
+#page3 {height:auto;background: #1d2132;padding-top:1rem;border-bottom: 1px solid #fff;padding-bottom: 1rem ;}
+.appli-content {width: 100%;height:auto;}
+.appli-part {width: 40%;margin-left: 10%;height:auto;float: left;}
+#page4 {height:auto;background: #1d2132;padding-top:1rem;border-bottom: 1px solid #fff;padding-bottom: 1rem;}
+#page5 {height:auto;background: #1d2132;padding-top:1rem;border-bottom: 1px solid #fff;padding-bottom: 1rem;}
+#page6 {height:auto;background: #1d2132;padding-top:1rem;border-bottom: 1px solid #fff;padding-bottom: 1rem;}
+.new-content {width:80%;margin-left:10%;height:auto;border-top: 1px dashed #000;float: left;padding-top: .2rem;border-bottom: 1px dashed #000;margin-top: 1rem;cursor: pointer;}
+.new-content-title {color:#fff;font-size: 8px;text-align: center;}
+.new-content-content {color:#fff;font-size: 8px;margin-top: 5px;}
+.footer-bottom {width: 100%;height: 2rem;position: static;bottom: 1rem;display:flex;justify-content: center;align-items: center;}
+.footer-word {font-size: 0.01rem;color: #fff;}
+</style>
+<script type="application/javascript">
+            /*<![CDATA[*/
+            var remPercent = 0;
+            (function (doc, win) {
+                var docEl = doc.documentElement, isIOS = navigator.userAgent.match(/iphone|ipod|ipad/gi),
+                    dpr = win.devicePixelRatio,
+                    scale = 1 / dpr, resizeEvt = 'orientationchange' in window ? 'orientationchange' : 'resize',
+                    widthBase = 1200;
+                docEl.dataset.dpr = win.devicePixelRatio;
+                if (navigator.userAgent.match(/iphone/gi) && screen.width == 375 && win.devicePixelRatio == 2) {
+                    docEl.classList.add('iphone6')
+                }
+                if (navigator.userAgent.match(/iphone/gi) && screen.width == 414 && win.devicePixelRatio == 3) {
+                    docEl.classList.add('iphone6p')
+                }
+                var metaEl = doc.createElement('meta');
+                metaEl.name = 'viewport';
+                metaEl.content = 'initial-scale=' + scale + ',maximum-scale=' + scale + ', minimum-scale=' + scale;
+                docEl.firstElementChild.appendChild(metaEl);
+                var recalc = function () {
+                    var width = docEl.clientWidth;
+                    if (width / dpr > widthBase) {
+                        width = widthBase * dpr;
+                    }
+                    if(dpr!=1){
+                        scale = scale-0.1;
+                    }
+                    docEl.style.fontSize = (150 * (width / widthBase) * (scale)) + 'px';
+                };
+                recalc();
+                if (!doc.addEventListener)
+                    return;
+                win.addEventListener(resizeEvt, recalc, false);
+            })(document, window);
+
+            /*]]>*/
+        </script>
+</head>
+<body style="overflow-y: scroll;margin: 0;padding: 0;">
+<div class="header">
+	<div class="logo"></div>
+	<div class="tabs">
+		<a class="tab-item" href="./index_mobile.html">首页</a>
+		<a class="tab-item" href="./front/pdf/ico.pdf">白皮书</a>
+	</div>
+</div>
+<div class="main-section" id="page1">
+<i class="logo"></i>
+<i class="subtitle"></i>
+<i class="subword">DTC-区域链应用的数据流通者</i>
+</div>
+<div class="main-section" id="page2">
+<!--<div class="dt-intro" >
+<img src="./front/images/title_left.png" style="height: .5rem;width: auto;" /><span class="intro-word" >&nbsp&nbsp&nbsp&nbsp数据链是什么&nbsp&nbsp&nbsp&nbsp</span><img src="./front/images/title_right.png" style="height: .5rem;width: auto;" />
+ </div>-->
+ <div class="dt-intro-content" >
+            <div class="dt-intro-base" >
+                <img src="./front/images/pagen1.jpg" />
+            </div>
+<!--            <div class="dt-intro-include" >
+            <p>DTC是一个区块链技术综合应用平台,拥有树状分层的、立体的多链架构，同时添加区域链技术2.0为核心的智能合约平台、分布式应用底层协议等创新技术。DTC将侧重于对各行业的数据储存，分析与决策，同时与其他应用链进行合作，实现DTC在各类数据中的交易与流通，在今后的时代能够成为行业数据应用的“流通者”。</p>
+            </div>
+-->
+</div>
+</div>
+<div class="main-section" id="page3">
+<!-- <div class="dt-intro" >
+<img src="./front/images/title_left.png" style="height: .5rem;width: auto;" /><span class="intro-word" >&nbsp&nbsp&nbsp&nbsp应用场景&nbsp&nbsp&nbsp&nbsp</span><img src="./front/images/title_right.png" style="height: .5rem;width: auto;" />
+ </div>-->
+ <div class="dt-intro-content" >
+ <div class="dt-intro-base" >
+    <img src="./front/images/np3.jpg" />
+</div>
+ </div>
+</div>
+<div class="main-section" id="page4">
+<!-- <div class="dt-intro" >
+<img src="./front/images/title_left.png" style="height: .5rem;width: auto;" /><span class="intro-word" >&nbsp&nbsp&nbsp&nbsp项目进度&nbsp&nbsp&nbsp&nbsp</span><img src="./front/images/title_right.png" style="height: .5rem;width: auto;" />
+ </div>-->
+ <div class="dt-intro-content" >
+ <div class="dt-intro-base" >
+    <img src="./front/images/np4.jpg" />
+</div>
+ </div>
+</div>
+<div class="main-section" id="page5">
+<!--<div class="dt-intro" >
+<img src="./front/images/title_left.png" style="height: .5rem;width: auto;" /><span class="intro-word" >&nbsp&nbsp&nbsp&nbsp团队介绍&nbsp&nbsp&nbsp&nbsp</span><img src="./front/images/title_right.png" style="height: .5rem;width: auto;" />
+ </div>-->
+ <div class="dt-intro-content" >
+ <div class="dt-intro-base" >
+    <img src="./front/images/np5.jpg" />
+</div>
+ </div>
+</div>
+<div class="main-section" id="page6">
+<div class="dt-intro" style="height: 1rem;">
+<img src="./front/images/title_left.png" style="height: .5rem;width: auto;" /><span class="intro-word" >&nbsp&nbsp&nbsp&nbsp新闻报道&nbsp&nbsp&nbsp&nbsp</span><img src="./front/images/title_right.png" style="height: .5rem;width: auto;" />
+ </div>
+ <div class="dt-intro-content">
+<div class="" style="width: 100%;height:auto;">
+        <div class="new-content content1" >
+            <p class="new-content-title">DTC即将发布，愿成区域链应用的数据流通者</p>
+            <p class="new-content-content" >ASDR团队创始人之一。曾长期作为IBM区块链项目ADEPT的核心设计者，后参与IBM与三星联合开展的物联网系统研发....</p>
+        </div>
+        <div class="new-content content2">
+            <p class="new-content-title" >DTC ICO细则</p>
+            <p class="new-content-content" >2017.6.26 DTC将进行ICO，ICO目标总额为2000BTC。DTC的ICO分配方案如下....</p>
+        </div>
+        </div>
+ </div>
+ <div class="footer-bottom" >
+            <span class="footer-word">2016-2017 17dtchain.com </span>
+     </div>
+</div>
+<script type="text/javascript" src="./front/js/plugin/jquery.min.js"></script>
+<script type="text/javascript">
+    $('.content2').click(function(){
+        if($('.nav-main').find('span').text() == 'Home'){
+            window.location.href='./newsDetail_en.html?news=1';
+        }else {
+        window.location.href='./newsDetail_mobile.html?news=1';
+    }
+    });
+    $('.content1').click(function(){
+        if($('.nav-main').find('span').text() == 'Home'){
+            window.location.href='./newsDetail_en.html?news=2';
+        }else {
+        window.location.href='./newsDetail_mobile.html?news=2';
+    }
+    });
+</script>

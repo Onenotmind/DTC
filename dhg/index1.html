@@ -1,0 +1,255 @@
+<html data-dpr="1" style="font-size: 100px; overflow: hidden; height: 100%;"><head>
+<style type="text/css">
+.language_box{ display: inline-block; position: relative;}
+.language_text,.language_gather li{ width: 50px;}
+.language_gather li{ height: 28px;}
+.language_text{ height: 28px;}
+.language_text img,.language_option img{ display: block; width: 24px; height: 24px; border-radius: 50%; margin: 5px 0 0 5px;}
+.language_gather{ width: 50px; height: 63px; border-top:0; margin-top: -2px;}           
+.down_icon{ border-left: 5px solid transparent; border-right: 5px solid transparent; border-top: 8px solid rgb(201,201,201); width: 0px; height: 0px; cursor: pointer; position: absolute; top:15px; right: 10px; left: 32px;}
+.language_text:hover,.language_option img:hover{ cursor: pointer;}
+.language_choose{ position: absolute; right: .5rem; top: .1rem;}
+.dt-intro {width: 100%;height:40px;text-align: center;}
+.intro-word {font-size: 16px;line-height: 18px;padding-bottom: .2rem;color:#fff;}
+.dt-intro-content {width: 100%;height:450px;}
+.dt-intro-base {width: 100%;height:320px;text-align: center;}
+.dt-intro-include {width: 100%;height: 130px;padding-left: 15%;padding-right: 15%;color: #fff;margin-top:.5rem;}
+.new-content {width:30%;margin-left:10%;height:120px;border-top: 1px dashed #000;float: left;padding-top: 20px;border-bottom: 1px dashed #000;margin-top: 20px;cursor: pointer;}
+.new-content-title {color:#fff;font-size: 14px;text-align: center;}
+.new-content-content {color:#fff;font-size: 12px;margin-top: 10px;}
+.content-title {font-size: 16px;line-height: 18px;padding-bottom: .2rem;color:#fff;}
+.dt-appli-content-item {width:20%;height:380px;border-left: 1px dashed #518ee9;float: left;padding-left:20px;margin-top:.2rem;}
+.footer-bottom {width: 100%;height: 1.25rem;position: static;bottom: 2rem;display:flex;justify-content: center;align-items: center;}
+.footer-word {font-size: 0.12rem;color: #fff;}
+    </style>
+        <meta charset="UTF-8">
+        <title>DTC|区域链应用的数据流通者</title>
+        <link rel="stylesheet" href="./front/css/comm.css">
+        <script type="application/javascript">
+            /*<![CDATA[*/
+            var remPercent = 0;
+            var clientWidth = screen.width;
+            if(clientWidth <800){
+                window.location.href='./index_mobile.html';
+            }
+            (function (doc, win) {
+                var docEl = doc.documentElement, isIOS = navigator.userAgent.match(/iphone|ipod|ipad/gi),
+                    dpr = win.devicePixelRatio,
+                    scale = 1 / dpr, resizeEvt = 'orientationchange' in window ? 'orientationchange' : 'resize',
+                    widthBase = 1200;
+                docEl.dataset.dpr = win.devicePixelRatio;
+                if (navigator.userAgent.match(/iphone/gi) && screen.width == 375 && win.devicePixelRatio == 2) {
+                    docEl.classList.add('iphone6')
+                }
+                if (navigator.userAgent.match(/iphone/gi) && screen.width == 414 && win.devicePixelRatio == 3) {
+                    docEl.classList.add('iphone6p')
+                }
+                var metaEl = doc.createElement('meta');
+                metaEl.name = 'viewport';
+                metaEl.content = 'initial-scale=' + scale + ',maximum-scale=' + scale + ', minimum-scale=' + scale;
+                docEl.firstElementChild.appendChild(metaEl);
+                var recalc = function () {
+                    var width = docEl.clientWidth;
+                    if (width / dpr > widthBase) {
+                        width = widthBase * dpr;
+                    }
+                    if(dpr!=1){
+                        scale = scale-0.1;
+                    }
+                    docEl.style.fontSize = (100 * (width / widthBase) * (scale)) + 'px';
+                };
+                recalc();
+                if (!doc.addEventListener)
+                    return;
+                win.addEventListener(resizeEvt, recalc, false);
+            })(document, window);
+
+            /*]]>*/
+        </script><meta name="viewport" content="initial-scale=1,maximum-scale=1, minimum-scale=1">
+    
+    <link rel="stylesheet" href="./front/css/index.css">
+    <link rel="stylesheet" href="./front/css/fullpage.css">
+    <script type="text/javascript" src="./front/js/plugin/jquery.min.js"></script>
+    <script type="text/javascript" src="./front/js/plugin/jquery.fullPage.min.js"></script>
+</head>
+<body style="overflow: hidden; height: 100%;" class="fp-viewing-0">
+
+        <div class="container-full header flex">
+            <h1 class="flex-center"><a href="#"><img  class="logo" src="./front/images/leftlogo2.png"></a></h1>
+            <div class="flex-grow flex-right">
+                <a class="nav-item active nav-main">
+                    <span>首页</span>
+                </a>
+                <a target="_blank" class="nav-item " href="./front/pdf/ico.pdf">
+                    <span>白皮书</span>
+                </a>
+                <a class="nav-item nav-news">
+                    <span>新闻报道</span>
+                </a>
+                
+            </div>
+          <div class="language_choose">
+                        <div class="language_box">
+                            <p class="language_text"><img src="./front/images/flag_china.png" alt=""></p><em class="down_icon"></em>
+                            <ul id="language_gather" style="display: none;">
+                                <li class="language_option"><a href="./index_en.html"><img src="./front/images/flag_usa.png" alt=""></a></li>
+                            </ul>
+                        </div>
+                    </div>
+        </div>
+<div id="mainContent" class="fullpage-wrapper" style="height: 100%; position: relative; touch-action: none; transform: translate3d(0px, 0px, 0px); transition: all 700ms ease;">
+
+    <div class="section container-full fp-section fp-table active" id="page1" style="height: 662px;padding-top:4%;">
+        <div class="container flex-center flex-direction">
+            <div class="display-box">
+                <i class="logo"></i>
+                <i class="subtitle"></i>
+                <i class="subword">DTC-区域链应用的数据流通者</i>
+            </div>
+        </div>
+    </div>
+    <div class="section container-full fp-section fp-table" id="page2" style="height: 662px;">
+        <div class="dt-intro" >
+<img src="./front/images/title_left.png" style="height: 16px;width: auto;" /><span class="intro-word" >&nbsp&nbsp&nbsp&nbsp数据链是什么&nbsp&nbsp&nbsp&nbsp</span><img src="./front/images/title_right.png" style="height: 16px;width: auto;" />
+
+        </div>
+        <div class="dt-intro-content" >
+            <div class="dt-intro-base" >
+                <img src="./front/images/base1.png" />
+            </div>
+            <div class="dt-intro-include" >
+            <p>DTC是一个区块链技术综合应用平台,拥有树状分层的、立体的多链架构，同时添加区域链技术2.0为核心的智能合约平台、分布式应用底层协议等创新技术。DTC将侧重于对各行业的数据储存，分析与决策，同时与其他应用链进行合作，实现DTC在各类数据中的交易与流通，在今后的时代能够成为行业数据应用的“流通者”。</p>
+            </div>
+        </div>
+    </div>
+    <div class="section container-full fp-section fp-table" id="page3" style="height: 662px;">
+            <div class="dt-appli" style="width: 100%;height:40px;text-align: center;">
+<img src="./front/images/title_left.png" style="height: 16px;width: auto;" /><span style="font-size: 16px;line-height: 18px;padding-bottom: .2rem;color:#fff;">&nbsp&nbsp&nbsp&nbsp应用场景&nbsp&nbsp&nbsp&nbsp</span><img src="./front/images/title_right.png" style="height: 16px;width: auto;" />
+
+        </div>
+        <div class="dt-appli-content" style="width: 100%;height:450px;">
+            <div class="dt-appli-content-item" style="padding-right: 20px;margin-left:9%;">
+                <div class="dt-content-top" style="width: 100%;height:40%;margin-top:5%;float: left;background:url(./front/images/i1.jpg) no-repeat;background-size:100% 100%;;"></div>
+                <div class="dt-content-bottom" style="width: 100%;height:49%;float: left;padding-top: 10%;color: #518ee9;">
+                    <span style="font-size:16px;" >数据处理</span>----DTC可用于企业级数据决策，为全球中小企业提供数据梳理，分析与决策。DTC可通过侧链链接一个应用，并提供多项数据分析，进行数据的分级处理。
+                </div>
+            </div>
+            <div style="width:20%;height:380px;border-left: 1px dashed #518ee9;float: left;padding-left:20px;padding-right: 20px;margin-top:.2rem;">
+                <div style="width: 100%;height:40%;margin-top:5%;float: left;background:url(./front/images/i2.jpg) no-repeat;background-size:100% 100%;;"></div>
+                <div style="width: 100%;height:49%;float: left;padding-top: 10%;color: #518ee9;">
+                    <span style="font-size:16px;" >数据溯源</span>----DTC因其侧链功能或者通过智能合约的手段，可并行处理多项应用。而区块链特有的不可修改的记录可显示企业级应用在运行过程中所有的数据轨迹，大大提高了产品在溯源定位上的优势。
+                </div>
+            </div>
+            <div style="width:20%;height:380px;border-left: 1px dashed #518ee9;float: left;padding-left:20px;padding-right: 20px;margin-top:.2rem;">
+                <div style="width: 100%;height:40%;margin-top:5%;float: left;background:url(./front/images/i311.png) no-repeat;background-size:100% 100%;;"></div>
+                <div style="width: 100%;height:49%;float: left;padding-top: 10%;color: #518ee9;">
+                    <span style="font-size:16px;" >身份识别</span>----在中心化系统中，由于中心定位的原因导致信息不具备完全公开透明。而区块链具备天然的数据轨迹清晰透明，DTC通过侧链分析，可完美的解决在企业应用中的一些由于身份模拟的场景。
+                </div>
+            </div>
+            <div style="width:20%;height:380px;border-left: 1px dashed #518ee9;border-right: 1px dashed #518ee9;float: left;padding-left:20px;padding-right: 20px;margin-top:.2rem;">
+                <div style="width: 100%;height:40%;margin-top:5%;float: left;background:url(./front/images/i41.png) no-repeat;background-size:100% 100%;;"></div>
+                <div style="width: 100%;height:49%;float: left;padding-top: 10%;color: #518ee9;">
+                    <span style="font-size:16px;" >决策树应用</span>----DTC以储存的企业数据为基础，通过侧链的多级算法处理，可形成有利于决策者分析决策的决策树。在决策树的基础上，可发展有着以企业为核心的企业级应用。
+                </div>
+            </div>
+        </div>
+       </div>
+           <div class="section container-full fp-section fp-table" id="page4" style="height: 662px;">
+            <div class="dt-timeline" style="width: 100%;height:40px;text-align: center;">
+<img src="./front/images/title_left.png" style="height: 16px;width: auto;" /><span style="font-size: 16px;line-height: 18px;padding-bottom: .2rem;color:#fff;">&nbsp&nbsp&nbsp&nbsp项目进度&nbsp&nbsp&nbsp&nbsp</span><img src="./front/images/title_right.png" style="height: 16px;width: auto;" />
+
+        </div>
+        <div class="dt-timeline-content" style="width: 100%;height:581px;">
+            <div style="width: 100%;height:180px;text-align: center;margin-top:40px;">
+                <img src="./front/images/timeline11.png" />
+            </div>
+            <div style="width: 100%;height: 130px;padding-left: 15%;padding-right: 15%;color: #fff;margin-top:.5rem;">
+            <p>2017.04&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspDTC研发团队成立，开始筹划DTC的研发工作<br/><br/>2017.05&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp在美国纽约召开的blockchain technology summit后，研发团队讨论了更改DTC现有架构，增加区域链新技术的方案<br/><br/>2017.07&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspDTC官方团队确定了在中国ICO的方案，登陆ICO平台<br/><br/>2017.08&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspICO成功后，两周时间内登陆中国交易所进行自由交易<br/><br/>2017.09&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp八月中下旬，DTC的市场波动应趋于稳定，开放矿池<br/><br/>2017.11&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp11月份DTC官方团队将开展与其他区域链团队合作工作，实现DTC的市场价值</p>
+            </div>
+        </div>
+       </div>
+    <div class="section container-full fp-section fp-table" id="page5" style="height: 662px;">
+        <div class="dt-timeline" style="width: 100%;height:40px;text-align: center;">
+<img src="./front/images/title_left.png" style="height: 16px;width: auto;" /><span style="font-size: 16px;line-height: 18px;padding-bottom: .2rem;color:#fff;">&nbsp&nbsp&nbsp&nbsp核心团队介绍&nbsp&nbsp&nbsp&nbsp</span><img src="./front/images/title_right.png" style="height: 16px;width: auto;" />
+
+        </div>
+        <div class="dt-timeline-content" style="width: 100%;height:624px;">
+            <div class="content-box">
+                    <div class="team-item">
+                        <div class="imgBox">
+                            <img src="./front/images/p1.jpg">
+                            <div class="shade"></div>
+                            <p class="name">
+                            <span>Gavin Ellis  核心设计师</span>
+                            <span class="dt-entro-word">Smart Bitcoin倡导者，Omni layer项目发起人之一。在卡耐基梅隆大学攻读分布式网络相关内容。具有十多年编程经验。现今专注于区域链技术，并与伙伴一起发起了DTC项目。</span>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="team-item">
+                        <div class="imgBox">
+                            <img src="./front/images/p31.jpg">
+                            <div class="shade"></div>
+                            <p class="name">
+                            <span>Joe Anderton  核心设计师</span>
+                            <span class="dt-entro-word">曾在硅谷人工智能创业公司MoodStock工作四年，担任公司神经数据网络研究的负责人之一。离职后被比特币的去中心化思想与区块链技术所吸引，参与过多个区块链相关项目。</span>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="team-item">
+                        <div class="imgBox">
+                            <img src="./front/images/p3.jpg">
+                            <div class="shade"></div>
+                            <p class="name">
+                            <span>Jack Yarwood  核心开发者</span>
+                            <span class="dt-entro-word">Bitcoin的忠实追求者，技术宅Geeker，曾在Amazon工作，负责公司的物流分发网络管理。之后转为比特币，区域链的追随者，在编程上有着强大的天赋。</span>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="team-item">
+                        <div class="imgBox">
+                            <img src="./front/images/1024.jpg">
+                            <div class="shade"></div>
+                            <p class="name">
+                            <span>John Tang  核心开发者</span>
+                            <span class="dt-entro-word">华人，也是Jack Yarwood的同事。在研究生阶段，John便接触过比特币，之后虽然一直在企业中工作，但私下一直保持对比特币的研究，曾自己开发过挖矿算法。</span>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="team-item">
+                        <div class="imgBox">
+                            <img src="./front/images/pp4.jpg">
+                            <div class="shade"></div>
+                            <p class="name">
+                            <span>Mike Li  产品经理</span>
+                            <span class="dt-entro-word">多家硅谷公司经历，曾在人工智能公司待过，后来辗转于VC创投公司。Mike有着丰富的编程经验与科技创投理念，正是他的观念绘制DTC的发展蓝图。</span>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="splitBox"></div>
+        </div>
+    </div>
+</div>
+    <div class="section container-full fp-section fp-table" id="page6" style="height: 662px;">
+        <div class="dt-intro" >
+<img src="./front/images/title_left.png" style="height: 16px;width: auto;" /><span class="content-title" >&nbsp&nbsp&nbsp&nbsp新闻报道&nbsp&nbsp&nbsp&nbsp</span><img src="./front/images/title_right.png" style="height: 16px;width: auto;" />
+
+        </div>
+        <div class="" style="width: 100%;height:450px;">
+        <div class="new-content content1" >
+            <p class="new-content-title">DTC即将发布，愿成区域链应用的数据流通者</p>
+            <p class="new-content-content" >ASDR团队创始人之一。曾长期作为IBM区块链项目ADEPT的核心设计者，后参与IBM与三星联合开展的物联网系统研发....</p>
+        </div>
+        <div class="new-content content2">
+            <p class="new-content-title" >DTC ICO细则</p>
+            <p class="new-content-content" >2017.6.26 DTC将进行ICO，ICO目标总额为2000BTC。DTC的ICO分配方案如下....</p>
+        </div>
+        </div>
+            <div class="footer-bottom" >
+            <span class="footer-word">CopyRight 2016-2017 17dtchain.com All Rights Reserved.</span>
+     </div>
+    </div>
+
+<script type="text/javascript" src="./front/js/index/index.js"></script>
+<script type="text/javascript" src="/front/js/comm/util.js"></script>
+<script type="text/javascript" src="/front/js/comm/comm.js"></script>
+</body></html>

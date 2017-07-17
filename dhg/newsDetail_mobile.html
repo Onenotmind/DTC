@@ -1,0 +1,158 @@
+<html lang="en" data-dpr="1" style="font-size: 100px;">
+<head>
+<style class="vjs-styles-defaults">
+      .video-js {
+        width: 300px;
+        height: 150px;
+      }
+
+      .vjs-fluid {
+        padding-top: 56.25%
+      }
+    </style><style class="vjs-styles-dimensions">
+      .my-video-dimensions {
+        width: 760px;
+        height: 430px;
+      }
+
+      .my-video-dimensions.vjs-fluid {
+        padding-top: 56.25%;
+      }
+    </style>
+
+<meta charset="UTF-8">
+        <title>DTC-区域链应用的数据流通者</title>
+        <link rel="stylesheet" href="./front/css/comm.css">
+            <style type="text/css">
+    .header {width: 100%; background: rgba(255, 255, 255, .12);border-bottom: 1px solid rgba(255, 255, 255, .23);box-shadow: 0 0.03rem 0.07rem 0 rgba(255, 255, 255, .12);height: 1.5rem;position: fixed;top: 0;left: 0;z-index: 100000;}
+.header .logo {width: 2.5rem;height: 1rem;position: absolute;top:0.25rem;left:1rem;z-index: 10;background: url(./front/images/leftlogo2.png) no-repeat;background-size:100% 100%;}
+.header .tabs{width: 6rem;height: 1rem;position: absolute;right:1rem;z-index: 10;margin-top:.3rem;}
+.header .tabs .tab-item {position:relative;width: 3rem;height: 1rem;font-size: .5rem;text-decoration: none;color:#fff;margin-right:.7rem;}
+        .language_box{ display: inline-block; position: relative;}
+.language_text,.language_gather li{ width: 50px;}
+.language_gather li{ height: 28px;}
+.language_text{ height: 28px;}
+.language_text img,.language_option img{ display: block; width: 24px; height: 24px; border-radius: 50%; margin: 5px 0 0 5px;}
+.language_gather{ width: 50px; height: 63px; border-top:0; margin-top: -2px;}           
+.down_icon{ border-left: 5px solid transparent; border-right: 5px solid transparent; border-top: 8px solid rgb(201,201,201); width: 0px; height: 0px; cursor: pointer; position: absolute; top:15px; right: 10px; left: 32px;}
+.language_text:hover,.language_option img:hover{ cursor: pointer;}
+.language_choose{ position: absolute; right: .5rem; top: .1rem;}
+.main-news{ width: 100%;height: auto;margin-top:3rem;color: #fff;  }
+.dt-intro {width: 100%;height:40px;text-align: center;}
+.main-title{font-size: 16px;line-height: 18px;padding-bottom: .2rem;}
+.dt-intro-content{width: 100%;height:auto;padding-left:20%;padding-right: 20%;}
+.content-news-title{width: 100%;height:80px;text-align: center;border-top: 1px dashed #518ee9;line-height: 40px;font-size: 20px;padding-top: 20px;}
+.content-news-main {width: 100%;height: auto;margin-top:.5rem;font-size: 8px;}
+.news-source {width: 100%;height:auto;margin-top:.5rem;font-size: 7px;margin-top: 40px;}
+.footer-bottom {width: 100%;height: 1.25rem;position: static;bottom: 2rem;display:flex;justify-content: center;align-items: center;margin-top:1rem;}
+.footer-word {font-size: 12px;color: #fff;}
+</style>
+        <script type="text/javascript" src="./front/js/plugin/jquery.min.js"></script>
+ <script type="application/javascript">
+            /*<![CDATA[*/
+            var remPercent = 0;
+            (function (doc, win) {
+                var docEl = doc.documentElement, isIOS = navigator.userAgent.match(/iphone|ipod|ipad/gi),
+                    dpr = win.devicePixelRatio,
+                    scale = 1 / dpr, resizeEvt = 'orientationchange' in window ? 'orientationchange' : 'resize',
+                    widthBase = 1200;
+                docEl.dataset.dpr = win.devicePixelRatio;
+                if (navigator.userAgent.match(/iphone/gi) && screen.width == 375 && win.devicePixelRatio == 2) {
+                    docEl.classList.add('iphone6')
+                }
+                if (navigator.userAgent.match(/iphone/gi) && screen.width == 414 && win.devicePixelRatio == 3) {
+                    docEl.classList.add('iphone6p')
+                }
+                var metaEl = doc.createElement('meta');
+                metaEl.name = 'viewport';
+                metaEl.content = 'initial-scale=' + scale + ',maximum-scale=' + scale + ', minimum-scale=' + scale;
+                docEl.firstElementChild.appendChild(metaEl);
+                var recalc = function () {
+                    var width = docEl.clientWidth;
+                    if (width / dpr > widthBase) {
+                        width = widthBase * dpr;
+                    }
+                    if(dpr!=1){
+                        scale = scale-0.1;
+                    }
+                    docEl.style.fontSize = (100 * (width / widthBase) * (scale)) + 'px';
+                };
+                recalc();
+                if (!doc.addEventListener)
+                    return;
+                win.addEventListener(resizeEvt, recalc, false);
+            })(document, window);
+
+            /*]]>*/
+        </script>
+</head>
+<body style="background: #1d2132;overflow-y: scroll;" class="fp-viewing-0">
+<div class="header">
+    <div class="logo"></div>
+    <div class="tabs">
+        <a class="tab-item" href="./index_mobile.html">首页</a>
+        <a class="tab-item" href="./front/pdf/ico.pdf">白皮书</a>
+    </div>
+</div>
+        <div class="main-news" >
+                <div class="section container-full fp-section fp-table" id="page2" style="height: auto;">
+        <div class="dt-intro" >
+<img src="./front/images/title_left.png" style="height: 16px;width: auto;" /><span class="main-title" >&nbsp&nbsp&nbsp&nbsp新闻详情&nbsp&nbsp&nbsp&nbsp</span><img src="./front/images/title_right.png" style="height: 16px;width: auto;" />
+
+        </div>
+        <div class="dt-intro-content" >
+            <div class="content-news-title" >
+            </div>
+            <div class="content-news-main" >
+            </div>
+            <div class="news-source" >
+                来源：http://www.toutiao.com/i6434401518878720514/
+            </div>
+        </div>
+    </div>
+        </div>
+        <div class="footer-bottom" >
+            <span class="footer-word">CopyRight 2016-2017 17dtc.com All Rights Reserved.</span>
+        </div>
+        <script type="text/javascript">
+            $(function () {
+var urlinfo=window.location.href;
+var urllen = urlinfo.length;
+var subindex = urlinfo.indexOf('=')+1;
+var indexVal = parseInt(urlinfo.substring(subindex,urllen));
+if(indexVal == 1){
+    $('.content-news-title').html('<p>DTC全球ICO细则</p><p style="font-size: 16px;">2017-07-10 06:33:19</p>');
+    $('.content-news-main').css('font-size','14px');
+    $('.content-news-title').css('font-size','14px');
+    $('.content-news-main').html('<p>&nbsp&nbspDTC将在北京时间2017.07.14 晚上8时进行ICO，ICO的目标总额为2000BTC。DTC的总量恒定为2亿个，永不增发，本次ICO的分配方案如下。<br/><br/><img style="width:100%;background-size:100% 100%;" src="./front/images/ico2.png" /><br/><br/>ICO的时间表如下：<br/><br/><img style="width:100%;background-size:100% 100%;" src="./front/images/ico1.png" /></p>');
+    $('.news-source').hide();
+}else if(indexVal ==2){
+    $('.content-news-title').html('<p>DTC即将发布，愿成区域链应用的数据流通者</p><p style="font-size: 16px;">2017-06-22 06:33:19</p>');
+    $('.content-news-main').css('font-size','10px');
+    $('.content-news-title').css('font-size','12px');
+    $('.content-news-main').html('<p>&nbsp&nbsp随着区块链技术的不断发展与创新，越来越多的应用现之于世。典型的应用包括比特币、莱特币等电子货币，实现更加安全公开的分布式记账系统、支付清算系统等。而近期兴起的瑞波(Ripple)、以太坊(Ethereum)等二代区块链技术，更是将区块链推向了应用研发阶段。<br /><br />&nbsp&nbsp来自美国的区块链核心研发团队宣布，区块链技术综合应用平台DTC(Data Chain)将正式发布。DTC是一个区块链技术综合应用平台,拥有树状分层的、立体的多链架构，同时添加区域链技术2.0为核心的智能合约平台、分布式应用底层协议等创新技术。按照核心研发人Gavin Ellis的描述，DTC将侧重于对各行业的数据储存，分析与决策，同时与其他应用链进行合作，实现DTC在各类数据中的交易与流通，在今后的时代能够成为行业数据应用的“流通者”。<br /><br />&nbsp&nbsp团队运营负责人Will Harrison表示，自比特币诞生没多久，中国便一直都是比特币最大的市场。在比特币论坛上，自己认识了不少能力出众的中国人。在中国，他看到了越来越多的革新者，能拥抱新的技术，新的产品，所以DTC选择中国。</p>');
+    $('.news-source').show();
+}else {
+
+}
+                 $('.language_text').click(function(){
+        if($('#language_gather').css('display')=='none'){
+        $('#language_gather').show();
+    }else {
+        $('#language_gather').hide();
+    }
+    });
+    $('.down_icon').click(function(){
+        if($('#language_gather').css('display')=='none'){
+        $('#language_gather').show();
+    }else {
+        $('#language_gather').hide();
+    }
+    });
+            });
+
+        </script>
+</body>
+</html>
+
+

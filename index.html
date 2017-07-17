@@ -5,6 +5,7 @@
     <title>index</title>
     <link rel="stylesheet" href="./libs/bootstrap.css" >
     <link rel="stylesheet" href="./libs/style.css" >
+    <link rel="stylesheet" href="./libs/scrolling-nav.css" >
     <style type="text/css">
     	.dropdown-menu > li > a >img {
     		width: 24px;
@@ -35,8 +36,9 @@
     		overflow: hidden; 
     		background-size: cover; 
     		background-repeat: no-repeat; 
+        background: #18252E;
     		background-position: 50% 50%; 
-    		background-image: url(./images/bg2-1.png);
+/*    		background-image: url(./images/bg2-1.png);*/
 
     	}
       .btn-lg,
@@ -147,7 +149,8 @@ hr {
         background-size: cover; 
         background-repeat: no-repeat; 
         background-position: 50% 50%; 
-        background-image: url(./images/bg2-1.png);
+        background: #18252E;
+        /*background-image: url(./images/bg2-1.png);*/
 
       }
       .clock-margin {
@@ -256,27 +259,26 @@ hr {
     <script src="./libs/jquery-3.1.0.min.js"></script>
     <script src="./libs/bootstrap.js" ></script>
     <script src="./libs/jquery.countdown.js"></script>
-    <script src="./libs/jquery.fullPage.min.js"></script>
 </head>
-<body style="overflow-y: auto;">
-<header class="navbar-fixed-top dtc-nav-color dtc-nav-bg">
+<body data-spy="scroll" data-target="#mynav" style="overflow-y: auto;">
+<header  class="navbar-fixed-top dtc-nav-color dtc-nav-bg">
 <div class="logo">
 	<img src="./images/leftlogo2.png">
 </div>
-<div class="dropdown mobile-menu" style="">
+<div id="dtchead" class="dropdown mobile-menu" style="">
   <a data-toggle="dropdown" href="#"><img src="./images/menu.png"></a></a>
   <ul class="dropdown-menu" role="menu" aria-labelledby="dLabel">
-    <li><a href="#">Home</a></li>
-    <li><a href="#">Intro</a></li>
-  <li><a href="#">Timeline</a></li>
-  <li><a href="#">Team</a></li>
+    <li><a class="page-scroll" href="#dtchead">Home</a></li>
+    <li><a class="page-scroll" href="#intro">Intro</a></li>
+  <li><a class="page-scroll" href="#mytimeline">Timeline</a></li>
+  <li><a class="page-scroll" href="#myteam">Team</a></li>
   </ul>
 </div>
-<ul class="nav nav-pills col-md-offset-8 common-font" >
-  <li class="active"><a href="#">Home</a></li>
-  <li><a class="intro">Intro</a></li>
-  <li><a href="#">Timeline</a></li>
-  <li><a href="#">Team</a></li>
+<ul id="mynav" class="nav nav-pills col-md-offset-8 common-font" >
+  <li class="active"><a class="page-scroll" href="#dtchead">Home</a></li>
+  <li><a class="page-scroll" href="#intro">Intro</a></li>
+  <li><a class="page-scroll" href="#mytimeline">Timeline</a></li>
+  <li><a class="page-scroll" href="#myteam">Team</a></li>
   <li class="dropdown">
       <a class="dropdown-toggle" data-toggle="dropdown" href="#">
         <img src="./images/flag_china.png"><span class="caret"></span>
@@ -288,22 +290,25 @@ hr {
 </header>
 <div class="wrap section">
 <div class="container">
-<div class="row" style="margin-top:20%;">
+<div class="row" style="">
 <div class="col-xs-12 col-sm-12 col-md-12 ">
+<p class="text-center">
+  <img src="./images/dt2.png">
+</p>
 <h2 class="text-center common-title-font" style="color: #fff;">The Circulation Of Blockchain Application</h2>
 <p class="text-center " style="margin-top: 4rem;">
   <button type="button" class="btn btn-primary btn-lg common-font mobile-button">TOKEN SALE</button>
   <button type="button" class="btn btn-primary btn-lg common-font mobile-button inverted-btn" >WHITE-PAPER</button>
 </p>
 <p class="text-center down-icon" style="margin-top:10rem;">
-  <img src="./images/double-down.png">
+  <a href="#mytime" class="page-scroll"><img src="./images/double-down.png"></a>
 </p>
 <h4 class="text-center common-font" style="color: #fff;">Learn More</h4>
 </div>
 </div>
 </div>
 </div>
-<div class="container coming-soon inner-bg clock-margin section" >
+<div id="mytime" class="container coming-soon inner-bg clock-margin section" >
     <div class="row">
         <div class="span12">
             <h2>We're Coming Soon</h2>
@@ -326,7 +331,7 @@ hr {
     </div>
 </div>
 
-<div class="container dtcintro section" style="margin-top: 5%;">
+<div id="intro" class="container dtcintro section" style="margin-top: 5%;">
 <hr> <div class="section-title">Introduction</div><hr>
 <div class="row col-md-12">
   
@@ -402,7 +407,7 @@ hr {
   
 </div>
 </div>
-<div class="container timeline section">
+<div id="mytimeline" class="container timeline section">
 <hr> <div class="section-title">Timeline</div><hr>
 <div class="row col-md-12 inner-bg">
   
@@ -417,7 +422,7 @@ hr {
   </div>
 </div>
 </div>
-<div class="container teamintro section" >
+<div  id="myteam" class="container teamintro section" >
 <hr> <div class="section-title">Team</div><hr>
   <div class="row inner-bg">
     <div class="col-md-3">
@@ -556,11 +561,8 @@ hr {
 </div>
 </div>
 <footer class="col-md-12 shrink inner-bg" style="margin-top:5%;color:#fff;">
-  <h5 class="text-center">CopyRight 2016-2017 17dtchain.com All Rights Reserved.</5>
+  <h5 class="text-center">CopyRight 2016-2017 17dtchain.com All Rights Reserved.</h5>
 </footer>
-<script type="text/javascript" src="libs/three.min.js"></script>
-<script type="text/javascript" src="libs/wave.js"></script>
-<script src="libs/scripts.js"></script>
 <script type="text/javascript">
   $(window).scroll(function(){
         $('.navbar-fixed-top').toggleClass('shrink',$(document).scrollTop()>60);
@@ -568,4 +570,10 @@ hr {
         $('.navbar-fixed-top').toggleClass('dtc-nav-bg',$(document).scrollTop()<60);
     })
 </script>
+<script type="text/javascript" src="libs/three.min.js"></script>
+<script type="text/javascript" src="libs/wave.js"></script>
+<script type="text/javascript" src="libs/jquery.easing.min.js"></script>
+<script type="text/javascript" src="libs/scrolling-nav.js"></script>
+<script src="libs/scripts.js"></script>
+
 </body>

@@ -1,0 +1,136 @@
+.container-full {min-width: 7.5rem;}
+.container {width: 7.5rem;}
+.header .nav-detail-box{width: 7.5rem;}
+.header .lan-detail-box{width: 7.5rem;}
+
+.page-body{ padding: .65rem .77rem 0 .77rem;display: flex;align-items: center;flex-direction: column;}
+.page-title{display: flex;align-items: center;margin-bottom: .55rem}
+.page-title .title{font-size: .22rem;height: .52rem;min-width: 2rem;display: flex;align-items: center;justify-content: center;position: relative;padding: 0 .1rem}
+.page-title i{width: .75rem;height: .43rem;position: absolute;}
+.page-title i.left{ top:0;left: 0}
+.page-title i.right{bottom: 0;right: 0}
+.page-title.white .title{color: #fff}
+.page-title.white i.left{background: url("../images/comm/title_left_white.png") no-repeat;background-size: 100% 100%}
+.page-title.white i.right{background: url("../images/comm/title_right_white.png") no-repeat;background-size: 100% 100%}
+.page-title.gray .title{color: #1d2132}
+.page-title.gray i.left{background: url("../images/comm/title_left_gray.png") no-repeat;background-size: 100% 100%}
+.page-title.gray i.right{background: url("../images/comm/title_right_gray.png") no-repeat;background-size: 100% 100%}
+.page-title.violet .title{color: #518ee9}
+.page-title.violet i.left{background: url("../images/comm/title_left_violet.png") no-repeat;background-size: 100% 100%}
+.page-title.violet i.right{background: url("../images/comm/title_right_violet.png") no-repeat;background-size: 100% 100%}
+
+#page1 {background:#151b32 url("../images/page1/page_1_1.jpg") no-repeat 50% 0;background-size:100% 100%;position: relative;}
+#page1 .content{width: 100%;height: auto;}
+#page1 .content .top{width: 100%;height: 4.6rem;}
+#page1 .logo { width: 2.22rem; height: 0.82rem; background: url("../images/page1/page_1_3.png") no-repeat;background-size:100% 100%;  position: absolute; left: 50%; top: 1rem; margin-left: -1.11rem; -moz-animation: rotate 5s infinite linear; -webkit-animation: rotate 5s infinite linear; animation: rotate 5s infinite linear; }
+#page1 .content .bottom{width: 100%;height: 1.5rem;align-items:flex-start;}
+#page1 .content .bottom .slogan{width: 6.63rem;height: 0.28rem;background:#151b32 url("../images/page1/page_1_2.png") no-repeat;background-size:100% 100%;}
+#page1 .content .bottom .slogan.en{background:#151b32 url("../images/page1/page_1_4.png") no-repeat;background-size:100% 100%;}
+@-moz-keyframes rotate {
+    0% { -moz-transform: rotate(0deg); }
+    10% { -moz-transform: rotate(180deg); }
+    50% { -moz-transform: rotate(180deg); }
+    60% { -moz-transform: rotate(360deg); }
+    100% { -moz-transform: rotate(360deg); }
+}
+@-webkit-keyframes rotate {
+    0% { -webkit-transform: rotate(0deg); }
+    10% { -webkit-transform: rotate(180deg); }
+    50% { -webkit-transform: rotate(180deg); }
+    60% { -webkit-transform: rotate(360deg); }
+    100% { -webkit-transform: rotate(360deg); }
+}
+@keyframes rotate {
+    0% { transform: rotate(0deg); }
+    10% { transform: rotate(180deg); }
+    50% { transform: rotate(180deg); }
+    60% { transform: rotate(360deg); }
+    100% { transform: rotate(360deg); }
+}
+
+#page2{background:#c7cfe7;padding-bottom: .65rem;}
+#page2 .content{width: 100%;display: inline-block; background: #1d2132;box-shadow: 0 0 0.15rem #1d2132;}
+#page2 .content-top{width:100%;height: 1.73rem;background: url("../images/page2/page_2_1.png") no-repeat 50% 50%;background-size: 100%;position: relative;margin-top: .65rem;margin-bottom: .5rem;}
+#page2 .content .top{position: absolute;left: 0;top: -.35rem;list-style: none;width: 100%}
+#page2 .content .top li{width:100%;height: 1.4rem;color:#fff;font-size: 0.18rem;text-align: center;}
+#page2 .content .center{width:100%;height: 0.6rem;list-style: none;position: absolute;left: 0;bottom: -.3rem;}
+#page2 .content .center li{width:100%;color:#fff;font-size: 0.16rem;text-align: center;}
+#page2 .content .bottom{width:100%;list-style: none;font-size: 0.2rem;color: #fff;padding: 0.36rem 0.16rem 0.5rem 0.16rem;line-height: 0.3rem;border-top: 1px dotted #fff;}
+
+#page3{background-color:#1d2132 ;padding-bottom: .85rem;}
+#page3 .content{width: 5.13rem;display: inline-block;}
+#page3 .content .tab-con-1{width:5.13rem;height: 3.56rem;background: url("../images/page3/page_3_1.jpg") no-repeat;background-size: 100% 100%;}
+#page3 .content .tab-con-2{width:5.13rem;height: 3.56rem;background: url("../images/page3/page_3_2.jpg") no-repeat;background-size: 100% 100%;}
+#page3 .content .tab-title{width:5.13rem;height: 1rem;font-size: 0.24rem;color: #fff;align-items: flex-start;}
+#page3 .content .tab-title p{width: 100%;height: 0.6rem;line-height: 0.6rem;text-align: center;}
+
+#page4{background: #1d2132;position: relative}
+#page4 .top-bg{background: url("../images/page4/page_4_1.png") no-repeat;background-size: 100%;width: 1.38rem;height: 1.6rem;position: absolute;top: 0;left: 0}
+#page4 .bottom-bg{background: url("../images/page4/page_4_2.png") no-repeat;background-size: 100%;width: 1.31rem;height: 1.78rem;position: absolute;bottom: 0;right: 0}
+#page4 .app-item{padding-bottom: .35rem;display: flex;}
+#page4 .app-info{border-top: dotted 1px #5d6b85;border-bottom: dotted 1px #5d6b85;color: #518ee9;padding: .1rem 0;}
+#page4 .app-info.right{margin-right: .35rem;}
+#page4 .app-info.left{margin-left: .35rem;}
+#page4 .app-info .title{text-align: center;line-height: .35rem;font-size: .26rem}
+#page4 .app-info .info{font-size: .24rem}
+#page4 .app-icon{display: flex;justify-content: center;align-items: center}
+#page4 .app-icon i{width: 2.25rem;height: 2.24rem;}
+#page4 .icon-1{background: url("../images/page4/page_4_3.png") no-repeat;background-size: 100%;}
+#page4 .icon-2{background: url("../images/page4/page_4_4.png") no-repeat;background-size: 100%;}
+#page4 .icon-3{background: url("../images/page4/page_4_5.png") no-repeat;background-size: 100%;}
+#page4 .icon-4{background: url("../images/page4/page_4_6.png") no-repeat;background-size: 100%;}
+
+#page5{background: url("../images/page5/page_5_1.jpg") repeat-y;background-size: 100%}
+#page5 .team-block{display: flex;padding-bottom: .35rem}
+#page5 .team-item{width: 48%;position: relative;}
+#page5 .team-item-split{width: 4%;}
+#page5 .team-split{background: url("../images/page5/page_5_2.png") repeat-x;background-size: 100%; height: .08rem;margin-bottom: .1rem}
+#page5 .team-phone{ }
+#page5 .team-phone .phone{width: 100%;float: left;}
+#page5 .team-job{border: #467bca 1px solid;padding: .15rem .1rem;}
+#page5 .team-job .name{color: #97aed2;font-size: .22rem;}
+#page5 .team-job .job{color: #518ee9;font-size:.22rem;}
+#page5 .team-intro{color: #3363aa;font-size: .26rem;padding-top: .15rem;}
+
+#page5 .team-item .detail-box{width: 5.96rem;min-height: 1rem;background: rgba(81,142,233,0.38);position: absolute;z-index: 100;border-radius: 0.1rem;padding: 0.1rem;display: none;}
+#page5 .team-item .detail-box.detail-left-box{top: -0.1rem;left: 0;}
+#page5 .team-item .detail-box.detail-right-box{top: -0.1rem;right: 0;}
+#page5 .team-item .detail-box .detail-content{width: 100%;min-height: 1rem;background-color: #518ee9;padding: 0 0.8rem 0.5rem;}
+#page5 .team-item .detail-box .detail-content p.title{width: 100%;height: 1.28rem;display: flex;justify-content: center;align-items: flex-end;font-size: 0.32rem;}
+#page5 .team-item .detail-box .detail-content p.post{width: 100%;height: 0.8rem;display: flex;justify-content: center;align-items: center;font-size: 0.2rem;}
+#page5 .team-item .detail-box .detail-content p.desc{width: 100%;height: auto;font-size: 0.22rem;}
+
+#page6{background: #1d2132;}
+#page6 .master-item{width: 100%;position: relative}
+#page6 .master-double{border-top: #818592 1px solid;border-bottom: #818592 1px solid; height: .07rem;}
+#page6 .master-top{height: 2.1rem;display: flex;justify-content: center;align-items: center;margin-top: .3rem;}
+#page6 .master-top .icon-1{background: url("../images/page6/page_6_2.png") no-repeat;width: 1.67rem;height: 1.69rem;background-size: 100% 100%}
+#page6 .master-top .icon-2{background: url("../images/page6/page_6_3.png") no-repeat;width: 1.68rem;height: 1.7rem;background-size: 100% 100%}
+#page6 .master-top .icon-3{background: url("../images/page6/page_6_4.png") no-repeat;width: 1.71rem;height: 1.71rem;background-size: 100% 100%}
+#page6 .master-title{color: #dbdbdc;text-align: center;line-height: .55rem;font-size: .32rem}
+#page6 .master-body{color: #dbdbdc;border-top: 1px dotted #4c5163;border-bottom: 1px dotted #4c5163;padding: .2rem .3rem;margin: 0 .3rem .35rem .3rem;font-size: .30rem}
+#page6 .master-banner{background: url("../images/page6/page_6_1.png") repeat-y;background-size: 100%; width: .34rem;height: 100%;position: absolute;}
+#page6 .master-banner.left{top: 0;left: -.4rem;}
+#page6 .master-banner.right{top: 0;right: -.4rem;}
+
+#page7{background:#1d2132 url("../images/page7/page_7_1.png") no-repeat left bottom; background-size: 100%;padding-bottom: .85rem;}
+#page7 .news{width: 100%;display: inline-block;}
+#page7 .news a{text-decoration: none;}
+#page7 .news-title{font-size: .22rem;color: #fff;border-bottom: .07rem solid rgba(255,255,255,.42);padding: .15rem 0;display: block;}
+#page7 .news-body{padding-top: .35rem;}
+#page7 .news-body .body-left{padding: .1rem .2rem;box-shadow:inset 0 0 .09rem rgba(255,255,255,.35);line-height: 1;}
+#page7 .news-body .body-left span{font-size: .12rem;color: #fff;}
+#page7 .news-body .body-left span:first-child{font-size: .28rem;}
+#page7 .news-body .body-right{padding: 0 .12rem;}
+#page7 .news-body .body-title{font-size: 0.16rem;color: #fff;}
+#page7 .news-body .body-content{font-size: 0.14rem;color: #b2b2ba;}
+
+#page8 {background: #1d2132; background: url("../images/page8/page_8_1.jpg") no-repeat 50% 50%;background-size: 100% 100%;height: 6.16rem;}
+#page8 ul{width: 100%;height: 3rem;list-style: none;}
+#page8 ul li{width: 1.6rem;height: 1rem;display: flex;align-items: center;justify-content: center;float: left;margin: 0.06rem 0.15rem;}
+#page8 ul li img{max-width: 1.6rem;}
+
+#page9 {background: #1d2132; background: url("../images/page9/page_9_1.jpg") no-repeat 50% 50%;background-size: 100% 100%;height: 6.16rem;}
+#page9 .video-box{width: 5.8rem;height:3.28rem; position: relative;}
+#page9 .video-box .my-video-dimensions{width: 100% !important; height: 100% !important;}
+#page9 .video-box .video-js .vjs-big-play-button{top: 1.4rem;left: 2.44rem;}
