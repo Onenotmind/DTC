@@ -137,6 +137,33 @@ hr {
   top:30px;
   display: none;
 }
+.logo-img {
+  width: 382px; height: 350px;position: absolute; left: 50%; top: 18rem; margin-left: -191px;margin-top: -175px;-moz-animation: rotate 30s infinite linear; -webkit-animation: rotate 30s infinite linear; animation: rotate 30s infinite linear; 
+}
+.logo-word {
+  width: 117px; height: 71px;margin-top:15rem;position: absolute; left: 50%; margin-left:-58.5px;
+}
+.dtc-btn-margin {
+  margin-top: 34rem;
+}
+.common-title-mobile {
+  display: none;
+}
+@-moz-keyframes rotate {
+    0% { -moz-transform: rotate(0deg); }
+    50% { -moz-transform: rotate(180deg); }
+    100% { -moz-transform: rotate(360deg); }
+}
+@-webkit-keyframes rotate {
+    0% { -webkit-transform: rotate(0deg); }
+    50% { -webkit-transform: rotate(180deg); }
+    100% { -webkit-transform: rotate(360deg); }
+}
+@keyframes rotate {
+    0% { transform: rotate(0deg); }
+    50% { transform: rotate(180deg); }
+    100% { transform: rotate(360deg); }
+}
 @media (max-width: 768px) {
   .wrap {
         position: absolute; 
@@ -175,6 +202,12 @@ hr {
     top:5px;
   display: block;
 }
+.dtc-btn-margin {
+  margin-top: 4rem;
+}
+.common-title-mobile {
+  display: block;
+}
 }
 @media (max-width: 768px) {
   .timeline img{
@@ -195,7 +228,13 @@ hr {
   position: relative;
   display: none;
 }
+.logo-img {
+  display: none;
+}
 
+.logo-word {
+  display: none;
+}
 }
     </style>
     <script type="application/javascript">
@@ -290,17 +329,20 @@ hr {
 </header>
 <div class="wrap section">
 <div class="container">
-<div class="row" style="">
+<div class="row">
 <div class="col-xs-12 col-sm-12 col-md-12 ">
-<p class="text-center">
-  <img src="./images/dt2.png">
-</p>
-<h2 class="text-center common-title-font" style="color: #fff;">The Circulation Of Blockchain Application</h2>
-<p class="text-center " style="margin-top: 4rem;">
+<div class="text-center logo-img">
+<img src="./images/dt2.png">
+</div>
+<div class="text-center logo-word">
+<img src="./images/DTC-big2.png">
+</div>
+<h2 class="text-center common-title-font common-title-mobile" style="color: #fff;font-size: 18px;margin-top: 8rem;">The Circulation Of Blockchain Application</h2>
+<p class="text-center dtc-btn-margin" >
   <button type="button" class="btn btn-primary btn-lg common-font mobile-button">TOKEN SALE</button>
   <button type="button" class="btn btn-primary btn-lg common-font mobile-button inverted-btn" >WHITE-PAPER</button>
 </p>
-<p class="text-center down-icon" style="margin-top:10rem;">
+<p class="text-center down-icon" style="margin-top:8rem;">
   <a href="#mytime" class="page-scroll"><img src="./images/double-down.png"></a>
 </p>
 <h4 class="text-center common-font" style="color: #fff;">Learn More</h4>
