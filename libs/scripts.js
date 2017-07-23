@@ -13,9 +13,11 @@ jQuery(document).ready(function() {
     /*
         Countdown initializer
     */
+    var endDate = new Date("2017-08-02 00:00:00"); 
+    var leftTime = endDate.valueOf();
     var now = new Date();
     var countTo = 25 * 24 * 60 * 60 * 1000 + now.valueOf();
-    $('.timer').countdown(countTo, function(event) {
+    $('.timer').countdown(leftTime, function(event) {
         var $this = $(this);
         switch(event.type) {
             case "seconds":
