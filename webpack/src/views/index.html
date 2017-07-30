@@ -3,102 +3,39 @@
 <head>
     <meta charset="UTF-8">
     <title>index</title>
-    <link rel="stylesheet" href="./libs/bootstrap.css" >
-    <link rel="stylesheet" href="./libs/style.css" >
-    <link rel="stylesheet" href="./libs/scrolling-nav.css" >
-    <script type="application/javascript">
-        /*<![CDATA[*/
-        // 判断是否是手机端浏览器
-        function getBrowser() {
-            var ua = navigator.userAgent.toLowerCase();
-            var btypeInfo = (ua.match(/firefox|chrome|safari|opera/g) || "other")[0];
-            if ((ua.match(/msie|trident/g) || [] )[0]) {
-                btypeInfo = "msie";
-            }
-            var pc = "";
-            var prefix = "";
-            var plat = "";
-            //如果没有触摸事件 判定为PC
-            var isTocuh = ("ontouchstart" in window) || (ua.indexOf("touch") !== -1) || (ua.indexOf("mobile") !== -1);
-            if (isTocuh) {
-                if (ua.indexOf("ipad") !== -1) {
-                    pc = "pad";
-                } else if (ua.indexOf("mobile") !== -1) {
-                    pc = "mobile";
-                } else if (ua.indexOf("android") !== -1) {
-                    pc = "androidPad";
-                } else {
-                    pc = "pc";
-                }
-            } else {
-                pc = "pc";
-            }
-            switch (btypeInfo) {
-                case "chrome":
-                case "safari":
-                case "mobile":
-                    prefix = "webkit";
-                    break;
-                case "msie":
-                    prefix = "ms";
-                    break;
-                case "firefox":
-                    prefix = "Moz";
-                    break;
-                case "opera":
-                    prefix = "O";
-                    break;
-                default:
-                    prefix = "webkit";
-                    break
-            }
-            plat = (ua.indexOf("android") > 0) ? "android" : navigator.platform.toLowerCase();
-            return {
-                version: (ua.match(/[\s\S]+(?:rv|it|ra|ie)[\/: ]([\d.]+)/) || [])[1],     //版本
-                plat: plat,                   //系统
-                type: btypeInfo,              //浏览器
-                pc: pc,
-                prefix: prefix,                //前缀
-                isMobile: (pc == "pc") ? false : true              //是否是移动端
-            };
-        };
-        /*]]>*/
-    </script><meta name="viewport" content="initial-scale=1,maximum-scale=1, minimum-scale=1">
-    <script src="./libs/jquery-3.1.0.min.js"></script>
-    <script src="./libs/bootstrap.js" ></script>
-    <script src="./libs/jquery.countdown.js"></script>
+<meta name="viewport" content="initial-scale=1,maximum-scale=1, minimum-scale=1">
 </head>
 <body data-spy="scroll" data-target="#mynav" style="overflow-y: auto;">
-<div class="preload preload-show" style="display: none;">
+<div class="preload preload-show">
 <div class="logo-pos logo-up">
-  <div class="preload-logo"><img class="logo-rotate" src="./images/logo.svg" width="36"></div>
+  <div class="preload-logo"><img class="logo-rotate" src="../img/logo.svg" width="36"></div>
 </div>
 <p class="text-center start-p start-p-up" >
-  <img src="./images/p1.jpg">
+  <img src="../img/p1.jpg">
   <i> Gavin Ellis & Joe Anderton Launch DTC project.</i>
 </p>
 <p class="text-center start-stand start-stand-up">
-  <img src="./images/stanford-logo.png">
+  <img src="../img/stanford-logo.png">
   <i> Combined with Stanford Univercity Engineer Lab for building architecture of DTC.</i>
 </p>
 <p class="text-center start-vc start-vc-show">
-  <img src="./images/westerntech.png">
+  <img src="../img/westerntech.png">
   <i> DTC Team receive 500 million from Western Technology Investment.</i>
 </p>
 <p class="text-center start-conference start-conference-show">
-  <img src="./images/trade.png">
+  <img src="../img/trade.png">
   <i> Accepted as creative-architecture blockchain in 3rd blockchain technology summit.</i>
 </p>
 <div class="logo-bottom starMainIn">
-  <img class="" src="./images/D logo.png" width="36"></div>
+  <img class="" src="../img/D logo.png" width="36"></div>
 </div>
 </div>
 <header  class="navbar-fixed-top dtc-nav-color dtc-nav-bg">
 <div class="logo">
-	<img src="./images/leftlogo2.png">
+	<img src="../img/leftlogo2.png">
 </div>
 <div id="dtchead" class="dropdown mobile-menu" style="">
-  <a data-toggle="dropdown" href="#"><img src="./images/menu.png"></a></a>
+  <a data-toggle="dropdown" href="#"><img src="../img/menu.png"></a></a>
   <ul class="dropdown-menu" role="menu" aria-labelledby="dLabel">
     <li><a class="page-scroll" href="#dtchead">Home</a></li>
     <li><a class="page-scroll" href="#intro">Intro</a></li>
@@ -113,10 +50,10 @@
   <li><a class="page-scroll" href="#myteam">Team</a></li>
   <li class="dropdown">
       <a class="dropdown-toggle" data-toggle="dropdown" href="#">
-        <img src="./images/flag_china.png"><span class="caret"></span>
+        <img src="../img/flag_china.png"><span class="caret"></span>
       </a>
       <ul class="dropdown-menu" style="min-width: 0;">
-        <li><a href="#"><img src="./images/flag_usa.png"></a></li>
+        <li><a href="#"><img src="../img/flag_usa.png"></a></li>
     </li>
 </ul>
 </header>
@@ -125,18 +62,18 @@
 <div class="row">
 <div class="col-xs-12 col-sm-12 col-md-12 ">
 <div class="text-center logo-img">
-<img src="./images/dt2.png">
+<img src="../img/dt2.png">
 </div>
 <div class="text-center logo-word">
-<img src="./images/DTC-big2.png">
+<img src="../img/DTC-big2.png">
 </div>
 <h2 class="text-center common-title-font common-title-mobile" style="color: #fff;font-size: 18px;margin-top: 8rem;">The Circulation Of Blockchain Application</h2>
 <p class="text-center dtc-btn-margin" >
   <button type="button" class="btn btn-primary btn-lg common-font mobile-button">TOKEN SALE</button>
-  <button type="button" class="btn btn-primary btn-lg common-font mobile-button inverted-btn" >WHITE-PAPER</button>
+  <a href="../pdf/white-paper.pdf"><button id="white-paper" type="button" class="btn btn-primary btn-lg common-font mobile-button inverted-btn" >WHITE-PAPER</button></a>
 </p>
 <p class="text-center down-icon" style="margin-top:8rem;">
-  <a href="#mytime" class="page-scroll"><img src="./images/double-down.png"></a>
+  <a href="#mytime" class="page-scroll"><img src="../img/double-down.png"></a>
 </p>
 <h4 class="text-center common-font" style="color: #fff;">Learn More</h4>
 </div>
@@ -172,7 +109,7 @@
   
   <div class="col-md-8 col-md-offset-2">
     <p class="text-center inner-bg">
-      <img src="./images/base_en.png" >
+      <img src="../img/base_en.png" >
     </p>
     <p>
       <i>DTC is a block-chain technology integrated application platform, with tree-like layered, three-dimensional multi-chain architecture, while adding blockchain technology 2.0 as the core of the intelligent contract platform, distributed application of the underlying protocol and other innovative technologies. DTC will focus on the data storage, analysis and decision-making of various industries, while working with other application chain to achieve DTC transactions in various types of data and circulation in the future to become the Circulation of blockchain applications</i>
@@ -186,7 +123,7 @@
 <div class="row inner-bg">
   <div class="col-md-4 col-md-offset-1 pull-left">
     <p class="text-center">
-      <img src="./images/feature1.png">
+      <img src="../img/feature1.png">
     </p>
   </div>
   <div class="col-md-4 col-md-offset-2 pull-left">
@@ -207,7 +144,7 @@
   </div>
   <div class="col-md-4  col-md-offset-2 pull-left">
     <p class="text-center">
-      <img src="./images/feature2.png">
+      <img src="../img/feature2.png">
     </p>
   </div>
   
@@ -215,7 +152,7 @@
 <div class="row">
   <div class="col-md-4 col-md-offset-1 pull-left">
     <p class="text-center">
-      <img src="./images/feature4.png">
+      <img src="../img/feature4.png">
     </p>
   </div>
   <div class="col-md-4 col-md-offset-2 pull-left">
@@ -236,7 +173,7 @@
   </div>
   <div class="col-md-4 col-md-offset-2 pull-left">
     <p class="text-center">
-      <img src="./images/feature3.png">
+      <img src="../img/feature3.png">
     </p>
   </div>
   
@@ -248,7 +185,7 @@
   
   <div class="col-md-10 col-md-offset-1">
     <p class="text-center">
-      <img src="./images/timeline_en2.jpg" >
+      <img src="../img/timeline_en2.jpg" >
     </p>
     <p>
       <i>2016.10&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspDTC team was established，start DTC project.<br/><br/>2017.05&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspParticipate in 3rd blockchain technology summit in New York
@@ -262,7 +199,7 @@
   <div class="row inner-bg">
     <div class="col-md-3">
       <p class="text-center">
-        <img src="./images/p1.jpg">
+        <img src="../img/p1.jpg">
       </p>
       <p class="text-center">Gavin Ellis  Co-founder CEO</p>
       <p>
@@ -273,7 +210,7 @@
     </div>
     <div class="col-md-3">
       <p class="text-center">
-        <img src="./images/p2.jpg">
+        <img src="../img/p4.jpg">
       </p>
       <p class="text-center">Joe Anderton  Co-founder CTO</p>
       <p>
@@ -284,23 +221,23 @@
     </div>
     <div class="col-md-3">
       <p class="text-center">
-        <img src="./images/p3.jpg">
+        <img src="../img/p3.jpg">
       </p>
-      <p class="text-center">Jack Yarwood Chief Developer</p>
+      <p class="text-center">Jack Yarwood Chief Advisor</p>
       <p>
        <i>
-        Bitcoin's faithful pursuer,  Geeker, worked in Amazon, was responsible for the company's logistics distribution network management. After the conversion to Bitcoin, blockchain followers, in the programming has a strong talent.
-        </i>
+       Stanford University Professor of Computer Science.Has focused on distributed computing and storage more than 15 years.With Bitcoin & blockchain technology grows up, Jack develop smart-coin project, do lots work for building up a reliable system to strengthen security during bitcoin circulation. 
+       </i>
       </p>
     </div>
     <div class="col-md-3">
       <p class="text-center">
-        <img src="./images/p4.jpg">
+        <img src="../img/pp4.jpg">
       </p>
       <p class="text-center">John Tang  Chief Developer</p>
       <p>
        <i>
-        Chinese, and Jack Yarwood's colleague. At the graduate stage, John came into contact with Bitcoin, and although he had been working in the business, he kept his research on Bitcoin in private and developed his own mining algorithm.
+       Bitcoin's faithful pursuer,  Geeker, worked in Amazon, was responsible for the company's logistics distribution network management. After the conversion to Bitcoin, blockchain followers, has a strong talentin the programming .
         </i>
       </p>
     </div>
@@ -308,7 +245,7 @@
   <div class="row">
     <div class="col-md-3">
       <p class="text-center">
-        <img src="./images/p5.jpg">
+        <img src="../img/p2.jpg">
       </p>
       <p class="text-center">Mike Li  Product Manager</p>
       <p>
@@ -318,7 +255,7 @@
     </div>
     <div class="col-md-3">
       <p class="text-center">
-        <img src="./images/p1.jpg">
+        <img src="../img/p2.jpg">
       </p>
       <p>
       <p class="text-center">Luka Pusic  Analysis</p>
@@ -329,7 +266,7 @@
     </div>
     <div class="col-md-3">
       <p class="text-center">
-        <img src="./images/p1.jpg">
+        <img src="../img/p31.jpg">
       </p>
       <p>
       <p class="text-center">Jure Sobocan  Finance Advisor</p>
@@ -340,7 +277,7 @@
     </div>
     <div class="col-md-3">
       <p class="text-center">
-        <img src="./images/p1.jpg">
+        <img src="../img/p2.jpg">
       </p>
       <p>
       
@@ -360,7 +297,7 @@
   <div class="carousel-inner">
     <div class="item active">
       <p class="text-center">
-        <img src="./images/coindesk.png">
+        <img src="../img/coindesk.png">
       </p>
       <p>
        <i>
@@ -370,7 +307,7 @@
     </div>
     <div class="item">
       <p class="text-center">
-        <img src="./images/media01.png">
+        <img src="../img/media01.png">
       </p>
       <p>
         <i>
@@ -380,7 +317,7 @@
     </div>
     <div class="item">
       <p class="text-center">
-        <img src="./images/Tokenmarket.png">
+        <img src="../img/Tokenmarket.png">
       </p>
       <p>
       <i>
@@ -400,17 +337,5 @@
 <footer class="col-md-12 shrink inner-bg" style="margin-top:5%;color:#fff;">
   <h5 class="text-center">CopyRight 2016-2017 17dtchain.com All Rights Reserved.</h5>
 </footer>
-<script type="text/javascript">
-  $(window).scroll(function(){
-        $('.navbar-fixed-top').toggleClass('shrink',$(document).scrollTop()>60);
-        $('.navbar-fixed-top').removeClass('dtc-nav-bg',$(document).scrollTop()>60);
-        $('.navbar-fixed-top').toggleClass('dtc-nav-bg',$(document).scrollTop()<60);
-    })
-</script>
-<script type="text/javascript" src="libs/three.min.js"></script>
-<script type="text/javascript" src="libs/wave.js"></script>
-<script type="text/javascript" src="libs/jquery.easing.min.js"></script>
-<script type="text/javascript" src="libs/scrolling-nav.js"></script>
-<script src="libs/scripts.js"></script>
 
 </body>

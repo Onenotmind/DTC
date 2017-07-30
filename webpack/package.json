@@ -1,0 +1,35 @@
+{
+  "name": "talmeeting",
+  "version": "1.0.0",
+  "description": "talmeeting",
+  "main": "index.js",
+  "scripts": {
+    "start": "node scripts/start.js",
+    "build": "node scripts/build.js",
+    "test": "node scripts/test.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "http://10.2.250.21/zouyu/talmeeting.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "babel": "^6.23.0",
+    "babel-loader": "^7.1.1",
+    "chalk": "^2.0.1",
+    "clean-webpack-plugin": "^0.1.16",
+    "css-loader": "^0.28.4",
+    "file-loader": "^0.11.2",
+    "html-loader": "^0.4.5",
+    "html-webpack-plugin": "^2.29.0",
+    "jquery": "^3.2.1",
+    "style-loader": "^0.18.2",
+    "url-loader": "^0.5.9",
+    "webpack": "^3.3.0",
+    "webpack-dev-server": "^2.6.1",
+    "whatwg-fetch": "^2.0.3",
+    "three": "^0.86.0"
+  }
+}
