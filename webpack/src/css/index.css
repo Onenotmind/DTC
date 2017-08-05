@@ -185,6 +185,13 @@
     font-weight: 300;
     font-size: 1.7rem !important;
 }
+#ico-plan i {
+    font-style: italic;
+    line-height: 1.7;
+    color: #242424 !important;
+    font-weight: 300;
+    font-size: 1.7rem !important;
+}
 
 .item .text-center img {
     height: 40px;

@@ -3,12 +3,15 @@
 
 <head>
   <meta charset="UTF-8">
-  <title>index</title>
+
+  <title>DTC--Circulation of blockchain applications</title>
+  <link rel="icon" href="./logo.ico" type="image/x-icon">
+    <link rel="shortcut icon" href="./logo.ico" type="image/x-icon">
   <meta name="viewport" content="initial-scale=1,maximum-scale=1, minimum-scale=1">
 </head>
 
 <body data-spy="scroll" data-target="#mynav" style="overflow-y: auto;">
-  <div class="preload preload-show" style="display:none;">
+  <div class="preload preload-show">
     <div class="logo-pos logo-up">
       <div class="preload-logo"><img class="logo-rotate" src="../img/logo.svg" width="36"></div>
     </div>
@@ -34,7 +37,7 @@
   </div>
   <header class="navbar-fixed-top dtc-nav-color dtc-nav-bg">
     <div class="logo">
-      <img src="../img/leftlogo2.png">
+      <img src="../img/leftlogo2.png" style="height:3rem;">
     </div>
     <div id="dtchead" class="dropdown mobile-menu" style="">
       <a data-toggle="dropdown" href="#"><img src="../img/menu.png"></a></a>
@@ -42,6 +45,7 @@
         <li><a class="page-scroll" href="#dtchead">Home</a></li>
         <li><a class="page-scroll" href="#intro">Intro</a></li>
         <li><a class="page-scroll" href="#mytimeline">Timeline</a></li>
+        <li><a class="page-scroll" href="#ico-plan">ICO</a></li>
         <li><a class="page-scroll" href="#myteam">Team</a></li>
       </ul>
     </div>
@@ -49,13 +53,14 @@
       <li class="active"><a class="page-scroll" href="#dtchead">Home</a></li>
       <li><a class="page-scroll" href="#intro">Intro</a></li>
       <li><a class="page-scroll" href="#mytimeline">Timeline</a></li>
+      <li><a class="page-scroll" href="#ico-plan">ICO</a></li>
       <li><a class="page-scroll" href="#myteam">Team</a></li>
       <li class="dropdown">
         <a class="dropdown-toggle" data-toggle="dropdown" href="#">
-        <img src="../img/flag_china.png"><span class="caret"></span>
+        <img src="../img/flag_usa.png"><span class="caret"></span>
       </a>
         <ul class="dropdown-menu" style="min-width: 0;">
-          <li><a href="#"><img src="../img/flag_usa.png"></a></li>
+          <li><a href="#"><img src="../img/flag_china.png"></a></li>
       </li>
       </ul>
   </header>
@@ -202,10 +207,28 @@
       </div>
     </div>
   </div>
-  <div id="ico-plan" class="container icoPlan section">
+  <div id="ico-plan" class="container section">
   <hr>
     <div class="section-title">ICO PLAN</div>
     <hr>
+    <div class="row inner-bg col-md-8 col-md-offset-2">
+      <p class="text-center">
+        <img src="../img/ico_plans2.jpg">
+      </p>
+    </div>
+    <div class="row inner-bg col-md-12" style="padding-top: 0;">
+      <div class="col-md-4 text-center">
+        <img src="../img/ico_plan.png">
+      </div>
+      <div class="col-md-6 col-md-offset-2">
+        <p>
+          <i>Dtchain, a block-chain technology integrated application platform, with tree-like layered, three-dimensional multi-chain architecture, announced terms for its upcoming Initial Coin
+Offering (ICO), scheduled for July 14th, 2017 at 00:00 UTC.The total number of tokens available for the ICO is limited to 60,000,000.The ICO plan as follows:</br>40% of total amount will be sold publicly.</br>30% of total amount will be mined for miner later.</br>15% of total amount will be hold by team.</br>10% of total amount will be used for business development.</br>5% of total amount is for reward and encourage.
+          </i>
+        </p>
+      </div>
+    </div>
+    
   </div>
   <div id="myteam" class="container teamintro section">
     <hr>
@@ -241,7 +264,7 @@
         <p class="text-center">Jack Yarwood Chief Advisor</p>
         <p>
           <i>
-       Stanford University Professor of Computer Science.Has focused on distributed computing and storage more than 15 years.With Bitcoin & blockchain technology grows up, Jack develop smart-coin project, do lots work for building up a reliable system to strengthen security during bitcoin circulation. 
+       Stanford University Professor of Computer Science.Has focused on distributed computing and storage more than 10 years.With Bitcoin & blockchain technology grows up, Jack develop smart-coin project, do lots work for building up a reliable system to strengthen security during bitcoin circulation. 
        </i>
         </p>
       </div>
@@ -353,19 +376,19 @@
       <div class="modal-content">
         <div class="modal-header">
           <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-          <h4 class="modal-title text-center" id="myModalLabel">Token Sale</h4>
-        </div>
-        <div class="modal-body input-group">
-          <span class="input-group-addon">Pirvate Key</span>
-          <input type="text" class="form-control" value="1DQe9F3agsDcr4qoTZ3Sush4e88Nv9tNxa" disabled>
+          <h4 class="modal-title text-center" id="myModalLabel">ADDRESS</h4>
         </div>
         <div class="modal-body input-group">
           <span class="input-group-addon">BTC Address</span>
-          <input type="text" class="form-control" value="1DQe9F3agsDcr4qoTZ3Sush4e88Nv9tNxa" disabled>
+          <input type="text" id="btc-addr" class="form-control" value="" disabled>
         </div>
         <div class="modal-body input-group">
           <span class="input-group-addon">ETH Address</span>
-          <input type="text" class="form-control" value="1DQe9F3agsDcr4qoTZ3Sush4e88Nv9tNxa" disabled>
+          <input type="text" id="eth-addr" class="form-control" value="" disabled>
+        </div>
+        <div class="modal-body input-group">
+          <span class="input-group-addon">Private Key</span>
+          <input type="text" id="private-key" class="form-control" value="" disabled>
         </div>
         <p class="text-center">Please remember private key and address.</p>
         <div class="modal-footer" style="text-align:center;">
@@ -380,22 +403,16 @@
       <div class="modal-content">
         <div class="modal-header">
           <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-          <h4 class="modal-title text-center" id="myModalLabel">Participant In</h4>
+          <h4 class="modal-title text-center" id="myModalLabel">About DTC Token</h4>
         </div>
-        <div class="modal-body input-group">
-          <span class="input-group-addon">Email</span>
-          <input type="text" class="form-control" placeholder="Please input your email">
-        </div>
-        <div class="modal-body input-group">
-          <span class="input-group-addon">Name</span>
-          <input type="text" class="form-control" placeholder="Please input your name">
-        </div>
-        <div class="modal-body input-group">
-          <span class="input-group-addon">Password</span>
-          <input type="text" class="form-control" placeholder="Please input your password">
+        <div class="modal-body input-group col-md-12">
+        <p class="col-md-10 col-md-offset-1" style="height:300px;overflow-y: scroll;">
+          DTC offers a marketplace where community members can start, promote
+and extend their businesses and users are able to find suitable solutions for their needs. DTC token owner owns a software license on this platform. Its value can be traded based on estimates of its capacity to produce sustained earnings for investors. DTC token is a step forward in the quality of digital coins. No other digital coin has the capacity to grow wealth with income generated outside of its community. Investors in these instruments can make money in just one way, when a new investor buys at a higher price. DTC token can produce earnings and grow in price.DTC token allows investors of any size – large or small – to participate through decentralized crowd investing. Funds are always kept separate and in your control. There's no need for a centralized pooled fund. This means you get access to the same opportunities as the wealthiest accredited investors. DTC token democratizes the investment playing field.</br>Digital Coins typically rise in value as they are used, but profitability is achieved only when they are sold. DTC token earnings capacity makes it possible for you to profit without ever needing to sell your coins. DTC token can be saved for long term ROI.</br>In the future Wall Street Investors will only be able to own transparent digital coins. Using DTC token to invest with is highly transparent and done under the advice of a Commodities Trading Advisor that is monitored to be in compliance with all U.S. financial regulations. Invest with peace of mind. DTC token was founded by experienced financial executives and licensed Commodities Trading Advisors.
+        </p>
         </div>
         <div class="modal-footer" style="text-align:center;">
-          <button id="join" type="button" class="btn btn-default" data-dismiss="modal">submit</button>
+          <button id="join" type="button" class="btn btn-default" data-dismiss="modal">NEXT</button>
         </div>
       </div>
     </div>

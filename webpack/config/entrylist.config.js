@@ -2,4 +2,5 @@
 
 module.exports = [
   'index',
+  'index_cn',
 ];
