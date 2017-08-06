@@ -257,7 +257,7 @@ hr {
 
 .mobile-menu {
     position: absolute;
-    right: 5rem;
+    right: 13rem;
     top: 30px;
     display: none;
 }
@@ -326,7 +326,7 @@ hr {
     .mobile-menu {
         position: absolute;
         right: 20px;
-        top: 5px;
+        top: 13px;
         display: block;
     }
     .dtc-btn-margin {
@@ -334,6 +334,10 @@ hr {
     }
     .common-title-mobile {
         display: block;
+    }
+    .shrink {
+    background: linear-gradient(to right, #182848, #4b6cb7);
+    height: 45px;
     }
 }
 
@@ -464,11 +468,14 @@ hr {
         left: 0;
     }
     .preload p i {
-    margin-left: 15px;
+    margin-left: 55px;
     color: #fff;
     font-size: 10px;
     letter-spacing: 1px;
-    line-height: 15px;
+    line-height: 25px;
+    text-align: left;
+    display: block;
+    margin-top: -80px;
     }
     .start-stand {
         left: 0;
@@ -479,6 +486,26 @@ hr {
     .start-conference {
         left: 0;
     }
+    #ico-plan img {
+        width: 350px;
+        height: auto;
+    }
+    #dtchead a img {
+        width: 24px;
+        height: 24px;
+        border-radius: 50%;
+    }
+    #dtchead ul li a {
+        color: #4b6cb7;
+    }
+    .preload p img {
+    width: 40px;
+    height: 40px;
+    border-radius: 40px;
+    margin-top: 40px;
+    margin-bottom: 40px;
+    display: block;
+}
 }
 
 @-moz-keyframes logo-bottom-show {
