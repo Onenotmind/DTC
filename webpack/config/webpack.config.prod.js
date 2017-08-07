@@ -39,6 +39,11 @@ module.exports = {
       names: ['libs', 'common'],
       minChunks: 3
     }),
+    new webpack.optimize.UglifyJsPlugin({
+      compress: {
+        warnings: false
+      }
+    }),
     ...generateHtmlWebpackPlugins(entryList),
   ], // plugins
   module: {
