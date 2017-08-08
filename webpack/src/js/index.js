@@ -10,6 +10,7 @@ import md5 from 'js-md5';
   "use strict";
 
   //scrolling-nav.js
+  $('body').show();
 
   $(window).scroll(function() {
     $('.navbar-fixed-top').toggleClass('shrink', $(document).scrollTop() > 60);

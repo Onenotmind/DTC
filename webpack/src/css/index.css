@@ -536,10 +536,10 @@ hr {
 }
 
 .logo-bottom-show {
-    animation-duration: 2s;
+    -webkit-animation-duration: 2s;
     -webkit-animation-name: logo-bottom-show;
-    animation-name: logo-bottom-show;
-    animation-fill-mode: forwards;
+    -webkit-animation-name: logo-bottom-show;
+    -webkit-animation-fill-mode: forwards;
     animation-delay: 13s;
     -webkit-animation-delay: 13s;
 }
@@ -575,10 +575,10 @@ hr {
 }
 
 .preload-show {
-    animation-duration: 4s;
+    -webkit-animation-duration: 4s;
     -webkit-animation-name: preload-show;
     animation-name: preload-show;
-    animation-fill-mode: forwards;
+    -webkit-animation-fill-mode: forwards;
     animation-delay: 15s;
     -webkit-animation-delay: 15s;
 }
@@ -611,10 +611,10 @@ hr {
 }
 
 .start-conference-show {
-    animation-duration: 2s;
+    -webkit-animation-duration: 2s;
     -webkit-animation-name: start-vc-show;
     animation-name: start-vc-show;
-    animation-fill-mode: forwards;
+    -webkit-animation-fill-mode: forwards;
     animation-delay: 11s;
     -webkit-animation-delay: 11s;
 }
@@ -647,10 +647,10 @@ hr {
 }
 
 .start-vc-show {
-    animation-duration: 2s;
+    -webkit-animation-duration: 2s;
     -webkit-animation-name: start-vc-show;
     animation-name: start-vc-show;
-    animation-fill-mode: forwards;
+    -webkit-animation-fill-mode: forwards;
     animation-delay: 9s;
     -webkit-animation-delay: 9s;
 }
@@ -731,10 +731,10 @@ hr {
 }
 
 .start-stand-up {
-    animation-duration: 3s;
+    -webkit-animation-duration: 3s;
     -webkit-animation-name: start-stand-up;
     animation-name: start-stand-up;
-    animation-fill-mode: forwards;
+    -webkit-animation-fill-mode: forwards;
     animation-delay: 6s;
     -webkit-animation-delay: 6s;
 }
@@ -785,7 +785,7 @@ hr {
 }
 
 .logo-up {
-    animation-duration: 3s;
+    -webkit-animation-duration: 3s;
     -webkit-animation-name: logo-up;
     animation-name: logo-up;
 }
@@ -828,25 +828,25 @@ hr {
 
 @-moz-keyframes logo-rotate {
     0% {
-        transform: rotate(0deg);
+        -moz-transform: rotate(0deg);
     }
     50% {
-        transform: rotate(180deg);
+        -moz-transform: rotate(180deg);
     }
     100% {
-        transform: rotate(360deg);
+        -moz-transform: rotate(360deg);
     }
 }
 
 @-webkit-keyframes logo-rotate {
     0% {
-        transform: rotate(0deg);
+        -webkit-transform: rotate(0deg);
     }
     50% {
-        transform: rotate(180deg);
+        -webkit-transform: rotate(180deg);
     }
     100% {
-        transform: rotate(360deg);
+        -webkit-transform: rotate(360deg);
     }
 }
 
@@ -863,7 +863,7 @@ hr {
 }
 
 .logo-rotate {
-    animation-duration: 6s;
+    -webkit-animation-duration: 6s;
     -webkit-animation-name: logo-rotate;
     animation-name: logo-rotate;
     -webkit-animation-iteration-count: infinite;
@@ -899,8 +899,8 @@ hr {
 .starMainIn {
     -webkit-animation-name: starMainIn;
     animation-name: starMainIn;
-    animation-duration: 2s;
-    animation-fill-mode: forwards;
+    -webkit-animation-duration: 2s;
+    -webkit-animation-fill-mode: forwards;
     animation-timing-function: linear;
     -webkit-animation-timing-function: linear;
     animation-delay: 13s;
