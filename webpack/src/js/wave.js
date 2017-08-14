@@ -66,8 +66,13 @@ var mouseX = 0,
 var windowHalfX = window.innerWidth / 2;
 var windowHalfY = window.innerHeight / 2;
 if (!getBrowser().isMobile) {
+  var screenHeight = window.screen.availHeight;
+  screenHeight = screenHeight +"px";
+  document.getElementById("mytime").style.marginTop=screenHeight;
   init();
   animate();
+}else {
+  document.getElementById("mytime").style.marginTop="75%";
 }
 
 function init() {

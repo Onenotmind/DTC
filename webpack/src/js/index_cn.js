@@ -5,11 +5,13 @@ import '../js/bootstrap.min.js';
 import '../js/jquery.countdown.js';
 import '../js/jquery.easing.min.js';
 import './wave.js';
-import md5 from 'js-md5';
+//import md5 from 'js-md5';
 (function() {
   "use strict";
 
   //scrolling-nav.js
+  $('body').show();
+ 
 
   $(window).scroll(function() {
     $('.navbar-fixed-top').toggleClass('shrink', $(document).scrollTop() > 60);
@@ -25,13 +27,13 @@ import md5 from 'js-md5';
   });
 
   //modal
-  if(localStorage.getItem('privateKey') === null){
-  var privateNum = Math.round(Math.random(0,10000)*10000).toString(); 
-  var privateKey = md5(privateNum);
-  localStorage.setItem('privateKey',privateKey);
-}else {
-  $('#private-key').val(localStorage.getItem('privateKey'));
-}
+//   if(localStorage.getItem('privateKey') === null){
+//   var privateNum = Math.round(Math.random(0,10000)*10000).toString(); 
+//   var privateKey = md5(privateNum);
+//   localStorage.setItem('privateKey',privateKey);
+// }else {
+//   $('#private-key').val(localStorage.getItem('privateKey'));
+//}
 $('#btc-addr').val('2063c1608d6e0baf80249c42e2be5804');
 $('#eth-addr').val('2063c1608d6e0baf80249c42e2be5804');
   $('.token-sale').click(function() {

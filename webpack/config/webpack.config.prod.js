@@ -10,7 +10,7 @@ function generateHtmlWebpackPlugins(list) {
   for (let e of list) {
     plugins.push(new HtmlWebpackPlugin({
       template: `./src/views/${e}.html`,
-      filename: `views/${e}.html`,
+      filename: `${e}.html`,
       chunks: ['libs', 'common', `${e}`]
     }));
   }

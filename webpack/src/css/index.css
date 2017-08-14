@@ -339,6 +339,9 @@ hr {
     background: linear-gradient(to right, #182848, #4b6cb7);
     height: 45px;
     }
+    .feature {
+        display: none;
+    }
 }
 
 @media (max-width: 768px) {
@@ -689,10 +692,10 @@ hr {
 }
 
 .start-p-up {
-    animation-duration: 3s;
+    -webkit-animation-duration: 3s;
     -webkit-animation-name: start-p-up;
     animation-name: start-p-up;
-    animation-fill-mode: forwards;
+    -webkit-animation-fill-mode: forwards;
     animation-delay: 3s;
     -webkit-animation-delay: 3s;
 }
