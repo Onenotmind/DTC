@@ -41,7 +41,7 @@ $('#eth-addr').val('0x00F3a9E14Fda469aBce54Befe371162928a7c700');
     //$('#join-sale-note').modal('hide');
     $('#join-sale').modal('toggle');
   });
-  var endDate = new Date("2017-08-16 00:00:00");
+  var endDate = new Date("2017-08-18 00:00:00");
 
   var now = new Date();
   if(now < endDate) {
