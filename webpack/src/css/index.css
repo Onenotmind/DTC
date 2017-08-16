@@ -292,6 +292,10 @@ hr {
     display: none;
 }
 
+.btn-margin-table {
+    margin-top: 10rem;
+}
+
 @media (max-width: 768px) {
     .wrap {
         position: absolute;
@@ -341,6 +345,9 @@ hr {
     }
     .feature {
         display: none;
+    }
+    .btn-margin-table {
+    margin-top: 3rem;
     }
 }
 
@@ -909,6 +916,7 @@ hr {
     animation-delay: 13s;
     -webkit-animation-delay: 13s;
 }
+
 
 
 /* scrolling-nav.css  */

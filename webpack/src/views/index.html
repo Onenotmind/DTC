@@ -11,7 +11,7 @@
 </head>
 
 <body data-spy="scroll" data-target="#mynav" style="overflow-y: auto;display: none;overflow-x: hidden;">
-  <div class="preload preload-show" >
+  <div class="preload preload-show" style="display: none;">
     <div class="logo-pos logo-up">
       <div class="preload-logo"><img class="logo-rotate" src="../img/logo.svg" width="36"></div>
     </div>
@@ -76,16 +76,38 @@
     <div class="container">
       <div class="row">
         <div class="col-xs-12 col-sm-12 col-md-12 ">
-          <div class="text-center logo-img">
+          <div class="text-center logo-img" >
             <img src="../img/dt2.png">
           </div>
-          <div class="text-center logo-word">
+          <div class="text-center logo-word" >
             <img src="../img/DTC-big2.png">
           </div>
           <h2 class="text-center common-title-font common-title-mobile" style="color: #fff;font-size: 18px;margin-top: 8rem;">The Circulation Of Blockchain Application</h2>
+          <table class="table col-md-8 col-xs-8 col-xs-offset-1 col-md-offset-1 text-center" style="color: #fff;width: 80%;margin-top: 18%;display: none;">
+          <tbody>
+            <tr>
+              <td>BTC RAISED</td>
+              <td>ETH RAISED</td>
+              <td>PARTICIPANT</td>
+              <td>GOAL</td>
+            </tr>
+            <tr>
+              <td>64 BTC</td>
+              <td>1246 ETH</td>
+              <td>187</td>
+                    <td>800 BTC</td>
+            </tr>
+          </tbody>
+        </table>
+        <div class="progress" style="display: none;">
+        <div class="progress-bar" role="progressbar" aria-valuenow="60" 
+            aria-valuemin="0" aria-valuemax="100" style="width: 23%;">
+            <span class="sr-only"></span>
+        </div>
+        </div>
           <p class="text-center dtc-btn-margin">
             <button type="button" class="btn btn-primary btn-lg common-font mobile-button token-sale">TOKEN SALE</button>
-            <a href="../pdf/white-paper.pdf">
+            <a href="./pdf/white-paper.pdf">
               <button id="white-paper" type="button" class="btn btn-primary btn-lg common-font mobile-button inverted-btn">WHITE-PAPER</button>
             </a>
           </p>
@@ -101,7 +123,7 @@
     <div class="row col-md-12">
       <div class="span12">
         <h2>We're Coming Soon</h2>
-        <p>DTC's ICO will begin in Aug 15!</p>
+        <p>DTC's ICO will begin in Aug 18!</p>
         <div class="timer">
           <div class="days-wrapper">
             <span class="days"></span>
@@ -226,12 +248,12 @@
     </div>
     <div class="row inner-bg col-md-12" style="padding-top: 0;">
       <div class="col-md-4 text-center">
-        <img src="../img/ico_plan.png">
+        <img src="../img/ico_plan1New.jpg">
       </div>
       <div class="col-md-6 col-md-offset-2">
         <p>
           <i>DTChain, a block-chain technology integrated application platform, with tree-like layered, three-dimensional multi-chain architecture, announced terms for its upcoming Initial Coin
-Offering (ICO), scheduled for Aug 15, 2017..The total number of tokens available for the ICO is limited to 60,000,000.The ICO plan as follows:</br>40% of total amount will be sold publicly.</br>30% of total amount will be mined for miner later.</br>15% of total amount will be hold by team.</br>10% of total amount will be used for business development.</br>5% of total amount is for reward and encourage.
+Offering (ICO), scheduled for Aug 18, 2017..The total number of tokens available for the ICO is limited to 60,000,000.The ICO plan as follows:</br>40% of total amount will be sold publicly.</br>30% of total amount will be mined for miner later.</br>15% of total amount will be hold by team.</br>10% of total amount will be used for business development.</br>5% of total amount is for reward and encourage.
           </i>
         </p>
       </div>
@@ -400,6 +422,22 @@ Offering (ICO), scheduled for Aug 15, 2017..The total number of tokens available
         </div> -->
         <p class="text-center">Please remember your address.</p>
         <div class="modal-footer" style="text-align:center;">
+          <button type="button" class="btn btn-default" data-dismiss="modal">close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+    <div class="modal fade" id="no-sale" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+          <h4 class="modal-title text-center" id="myModalLabel">NOTICE</h4>
+        </div>
+        <div class="modal-body input-group text-center" style="width: 100%;">
+          <span>ICO Will Begin In Aug 18!</span>
+        </div>
+        <div class="modal-footer text-center" style="text-align: center;">
           <button type="button" class="btn btn-default" data-dismiss="modal">close</button>
         </div>
       </div>

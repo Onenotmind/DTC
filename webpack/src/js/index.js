@@ -33,19 +33,37 @@ import './wave.js';
 // }else {
 //   $('#private-key').val(localStorage.getItem('privateKey'));
 // }
-$('#btc-addr').val('2063c1608d6e0baf80249c42e2be5804');
-$('#eth-addr').val('2063c1608d6e0baf80249c42e2be5804');
-  $('.token-sale').click(function() {
-    $('#join-sale-note').modal();
-  });
+$('#btc-addr').val('16iqQ4gcKJcdMBENedUhi5ww8oh3in7T5U');
+$('#eth-addr').val('0x00F3a9E14Fda469aBce54Befe371162928a7c700');
+  
 
   $('#join').click(function() {
     //$('#join-sale-note').modal('hide');
     $('#join-sale').modal('toggle');
   });
-  var endDate = new Date("2017-08-15 00:00:00");
-  var leftTime = endDate.valueOf();
+  var endDate = new Date("2017-08-16 00:00:00");
+
   var now = new Date();
+  if(now < endDate) {
+    $('.token-sale').click(function() {
+    $('#no-sale').modal();
+  })
+  }else {
+    $('.logo-img').hide();
+    $('.logo-word').hide();
+    $('.common-title-font').hide();
+    $('.table').show();
+    $('.progress').show();
+    $('.dtc-btn-margin').addClass("btn-margin-table");
+    $('.span12 h2').text('ICO IS IN PROGRESS.');
+    $('.span12 p').text(' ICO Will End At Sep 18!');
+    endDate = new Date("2017-09-18 00:00:00");
+    $('.token-sale').click(function() {
+    $('#join-sale-note').modal();
+
+  });
+  }
+  var leftTime = endDate.valueOf();
   var countTo = 25 * 24 * 60 * 60 * 1000 + now.valueOf();
   $('.timer').countdown(leftTime, function(event) {
     var $this = $(this);
